@@ -20,14 +20,16 @@ class Contact(models.Model):
     text =  models.CharField(max_length = 255)
     date = models.DateField()
     
-class Booking (models.Model):
+class Booking(models.Model):
     full_name = models.CharField(max_length = 255)
     email = models.CharField(max_length = 255)
     phone = models.IntegerField()
     message = models.CharField(max_length = 255)
+    order_date = models.DateField()
     check_in = models.DateField()
     check_out = models.DateField()
-    roomId = models.ForeignKey(Room, on_delete=models.CASCADE)
+    room_id = models.ForeignKey(Room, on_delete=models.CASCADE)
+    status = models.CharField(max_length = 255)
 
 
     
