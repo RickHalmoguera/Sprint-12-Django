@@ -1,0 +1,50 @@
+.button {
+  width: 21rem;
+  height: 6rem;
+  color: #FFF;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  border: 2px solid rgba(255, 255, 255, 0.33);
+}
+.button--dark {
+  background-color: #BEAD8E;
+  border: none;
+}
+.button--light {
+  background-color: transparent;
+  margin-bottom: 5em;
+}
+
+.calendarSection {
+  background-color: #222;
+  padding: 4em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+.calendarSection__inputsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.calendarSection__label {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.calendarSection__input {
+  background: transparent;
+  width: 100%;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  color: #777;
+  border: none;
+  border-bottom: 2px solid #BEAD8E;
+  padding-bottom: 0.5em;
+}/*# sourceMappingURL=calendarSection.css.map */

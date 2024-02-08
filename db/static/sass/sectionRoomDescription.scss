@@ -1,0 +1,124 @@
+@import "./variables.scss";
+
+.sectionRoomDescription{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: left;
+    padding: 2em 1em 4em 1em;
+
+    &__p{
+        color: $font__color--text-medium;
+        font-family: $font__family--extra;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem; 
+    }
+
+    &__h2{
+        color: $font__color--text-darkest;
+        font-family: $font__family--sec;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+    }
+
+    &__h3{
+        color: $font__color--highlight;
+        font-family: $font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+    }
+
+    &__img{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    &__span{
+        color: $font__color--text-medium;
+        font-family: $font__family--extra;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &__flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__ul{
+        width: 100%;
+        height: 260px;
+        display: grid;
+        grid-template-columns: repeat( 2,150px );
+        column-gap:10em;
+    }
+    &__li{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    &__profileContainer{
+        width: 16rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+
+    }
+
+    &__profile{
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__checkContainer{
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.6rem;
+        height: 4.6rem;
+        background-color: $bg__color--medium;
+        border: 2px solid $font__color--text-light;
+        border-radius: 50%;
+    }
+
+    &__profileText{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        text-align: center;
+        margin-bottom: 4em;
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    .sectionRoomDescription{
+        max-width: 60%;
+
+        &__ul{
+            
+            grid-template-columns: repeat( 3,150px );
+        }
+    }
+
+}

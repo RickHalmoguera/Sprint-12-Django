@@ -1,0 +1,45 @@
+@import "./variables.scss";
+
+.sectionFacilities{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: center;
+    padding: 8em 1em 0 1em;
+    text-align: center;
+
+    &--dark{
+        background-color: $bg__color--dark;
+        padding: 8em 1em 4em 1em;
+    }
+
+    &__h2{
+        font-family: $font__family--main;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 1.8rem; 
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        color: $font__color--text-medium;
+
+        &--light{
+            color: $font__color--text-light;
+        }
+    }
+
+    &__h1{
+        font-family: $font__family--sec;
+        font-size: 5.6rem;
+        font-weight: 400;
+        line-height: 6rem;
+        letter-spacing: -1.2px;
+        color: $font__color--text-darkest;
+
+        &--light{
+            color: $font__color--text-light;
+        }
+    }
+
+
+
+}

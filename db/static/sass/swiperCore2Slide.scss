@@ -1,0 +1,50 @@
+@import "./variables.scss";
+
+.swiperCore2Slide{
+    width: 100%;
+    z-index: 2;
+    position: relative;
+
+    &__wrapper{
+        width: 100%;
+        max-width: 40rem;
+       
+    }
+
+
+    &__container{
+        z-index: 3;
+        width: 100%;
+        top: 25%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img{
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+    }
+
+    &__button{
+        width: 3.2rem;
+        height: 3.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        --swiper-navigation-size: 1.2rem;
+    }
+
+
+    &__button--next{
+        background-color: $bg__color--medium;
+        color: $font__color--text-light;
+        
+    }
+
+    &__button--prev{
+        background-color:$bg__color--light;
+    }
+}

@@ -1,0 +1,58 @@
+@import "./variables.scss";
+
+.sectionMenu{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 5em 1em 5em 1em;
+    max-width: 1420px;
+    overflow-x: hidden;
+
+    &__h2{
+        font-family: $font__family--main;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 1.8rem; 
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        color: $font__color--text-medium;
+    }
+
+    &__h1{
+        font-family: $font__family--sec;
+        font-size: 5.6rem;
+        font-weight: 400;
+        line-height: 6rem;
+        letter-spacing: -1.2px;
+        color: $font__color--text-darkest;
+    }
+
+    &__img{
+        width: 11rem;
+        height: 11rem;
+        margin-left: calc(100% - 6rem);
+    }
+
+    &__controls{
+        display: flex;
+        gap: 3em;
+        justify-content: flex-end;
+    }
+
+}
+
+@media only screen and (min-width:1000px) {
+    .sectionMenu{
+        &__img{
+        
+            margin-left: 0px;
+        }
+        &__controls{
+            display: none;
+            
+        }
+    }
+
+
+}

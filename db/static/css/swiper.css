@@ -1,0 +1,18 @@
+.swiperRoom {
+  width: 100%;
+  height: 50rem;
+}
+.swiperRoom__slide {
+  height: 100%;
+}
+.swiperRoom__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 1000px) {
+  .swiper--slide--big {
+    width: 70rem;
+  }
+}/*# sourceMappingURL=swiper.css.map */

@@ -1,0 +1,53 @@
+@import './variables.scss';
+
+.logo{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
+    &__square{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.29);
+    
+        &--light{
+            background-color: $bg__color--light;
+        }
+
+        &--highlight{
+            background-color: $bg__color--medium;
+        }
+    }
+
+    &__span{
+        text-transform: uppercase;
+        font-family: $font__family--main;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 4.3rem;
+    }
+
+    &__text{
+        color: $font__color--text-darkest;
+        font-family: $font__family--main;
+        font-size: 2rem;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+    }
+
+    &__p--regular{
+        font-weight: 400;
+    }
+    &__p--bold{
+        font-weight: 700;
+    }
+
+
+
+}

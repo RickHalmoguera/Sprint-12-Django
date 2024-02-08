@@ -1,0 +1,16 @@
+@import "./variables.scss";
+
+.swiper2Slide{
+    display: flex;
+    width: 100%;
+
+    &__img{
+        width: 100%;
+        min-height:270px;
+    }
+
+    &__bullets{
+        --swiper-pagination-color:#BEAD8E;
+        text-align: center;
+    }
+}

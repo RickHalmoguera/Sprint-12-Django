@@ -1,0 +1,73 @@
+@import "./variables.scss";
+
+.sectionContactForm{
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 2em;
+
+    &__topGroup{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    &__input{
+        height: 6.7rem;
+        background-color: $bg__color--mediumLight;
+        border: none;
+        width: 100%;
+        padding: 1em 3em;
+        
+        &--center{
+            align-self: center;
+        }
+    }
+
+    &__textArea{
+        background-color: $bg__color--mediumLight;
+        border: none;
+        padding: 1em 3em;
+        width: 100%;
+    }
+
+    &__container{
+        position: relative;
+    }
+
+    &__img{
+        position: absolute;
+        top: 50%;
+        left: 1em;
+        transform: translateY(-50%);
+
+        &--top{
+            position: absolute;
+            top: 1em;
+            left: 1em;
+        }
+    }
+}
+
+@media only screen and (min-width:1000px) {
+
+    .sectionContactForm{
+        margin: 0 auto;
+        max-width: 1420px;
+        &__topGroup{
+            width: 100%;
+            flex-direction: row;
+        }
+
+        &__group{
+            width: 100%;
+        }
+    }
+}

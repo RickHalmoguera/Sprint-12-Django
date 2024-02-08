@@ -1,0 +1,147 @@
+@import "./variables.scss";
+
+.sectionRoomMain{
+    max-width: 1420px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: left;
+    padding: 16em 1em 4em 1em;
+
+  
+    &__h2{
+        color: $font__color--text-medium;
+        font-family: $font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+    }
+
+    &__h1{
+        color: $font__color--text-darkest;
+        font-family: $font__family--sec;
+        font-size: 4.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 4.8rem; 
+        letter-spacing: -1.44px;
+    }
+
+    &__h4{
+        color: $font__color--text-darkest;
+        font-family: $font__family--main;
+        text-align: center;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.54px;
+    }
+
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    &__img{
+        width: 100%;
+        
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    &__p{
+        color: $font__color--text-medium;
+        font-family: $font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem; 
+  
+        &--highlight{
+            color: $font__color--highlight;
+            font-family: $font__family--main;
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 4.3rem;
+        }
+    }
+
+    &__span{
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 4.3rem;
+    }
+
+    &__calendar{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    &__inputsContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    
+    &__label{
+        color: $font__color--text-darkest;
+        font-family: $font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__input{
+        width: 100%;
+        height: 6rem;
+        border: none;
+        background-color: $bg__color--mediumLight;
+        color: $font__color--text-medium;
+        font-family:$font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    .sectionRoomMain{
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+
+        &__flex{
+        width: 55%;
+        background-color: $bg__color--light;
+        padding: 2em;
+        position: absolute;
+        top: 8em;
+        display: flex;
+        align-items: center;
+        gap: 2em;
+        }
+
+        &__img{
+
+            max-width: 60%;
+        }
+
+        &__inputsContainer{
+            width: 370px;
+            padding: 0 1em;
+        }
+    }
+}

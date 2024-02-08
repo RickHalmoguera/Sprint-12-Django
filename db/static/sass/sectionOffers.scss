@@ -1,0 +1,171 @@
+@import "./variables.scss";
+
+.sectionOffers{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 5em 1em 4em 1em;
+    max-width: 1420px;
+    margin: 0 auto;
+    
+    &__img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    &__imgContainer{
+        position: relative;
+        margin-bottom: 2em;
+    }
+
+    &__prices{
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+
+        &--alt{
+            display: none;
+        }
+    }
+
+    &__p{
+        color: $font__color--text-medium;
+        font-family: $font__family--extra;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem;
+        &--highlight{
+            color: $font__color--highlight;
+            font-family: $font__family--main;
+            font-size: 2.3rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-decoration:line-through;
+        }
+
+        &--red{
+            color: $font__color--text-red;
+            font-family: $font__family--main;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal; 
+        }
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+    }
+
+    &__h2{
+        color: $font__color--text-medium;
+        font-family: $font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+    }
+
+    &__h1{
+        color: $font__color--text-darkest;
+        font-family: $font__family--sec;
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 4.8rem;
+        letter-spacing: -1.44px;
+    }
+
+    &__flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__li{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 1.5em;
+    }
+    &__span{
+        color: $font__color--text-medium;
+        font-family: $font__family--extra;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+
+@media only screen and (min-width:1000px) {
+    .sectionOffers{
+
+        .topText__container{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+        &__prices{
+           display: none;
+           &--alt{
+            display: flex;
+            flex-direction: column;
+            gap:1em;
+            
+            text-align: right;
+        }
+        }
+
+        &__text{
+            background-color: $bg__color--light;
+            padding: 5em 4em;
+            border-top: 5px solid $bg__color--medium;
+            margin: 0 auto;
+            max-width: 90%;
+            position: relative;
+            top:-9em
+
+        }
+        &__img{
+            height: 570px;
+        }
+
+        &__topText{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__bottomText{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        &__p{
+            max-width: 496px;
+
+        }
+
+        &__flex{
+            display: flex;
+            gap: 2em;
+            margin-right: 5em;
+        }
+  
+    }
+
+}

@@ -1,0 +1,80 @@
+@import "./variables.scss";
+@import "./button.scss";
+
+
+.sectionVideo{
+    background-color: $bg__color--dark;
+    padding: 8em 1em 3em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    height: 85rem;
+
+    
+
+    &__h2{
+        color: $font__color--highlight;
+        font-family: $font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        grid-area: area1;
+    }
+
+    &__h1{
+        color: $font__color--text-light;
+        font-family: $font__family--sec;
+        font-size: 5.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 6rem;
+        letter-spacing: -1.2px;
+        grid-area: area2;
+    }
+
+    &__p{
+        color: $font__color--text-mediumLight;
+        font-family: $font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem; 
+        grid-area: area3;
+        max-width: 485px;
+    }
+
+    &__video{
+        width: 100%;
+        height: 100%;
+        max-height: 460px;
+        grid-area: area4;
+    }
+
+    &__button{
+        grid-area: area5;
+    }
+}
+
+@media only screen and (min-width:1000px) {
+
+    .sectionVideo{
+        background: linear-gradient(to right,$bg__color--dark 0%,$bg__color--dark 70%, $bg__color--medium 70%, $bg__color--medium 100%);
+       height: auto;
+
+        &__container{
+         display: grid;
+        grid-template-areas: 
+        'area1 area4'
+        'area2 area4'
+        'area3 area4'
+        'area5 area4';
+        align-items: center;
+        
+        margin: 0 auto;
+        max-width: 1420px;
+    }
+    }
+}

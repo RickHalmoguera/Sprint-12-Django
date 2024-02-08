@@ -1,0 +1,146 @@
+@import "./variables.scss";
+@import "./button.scss";
+
+.sectionAbout{
+    width: 100%;
+    max-width: 1420px;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    
+    align-items: center;
+    padding: 8em 1em 0 1em;
+   
+
+   
+    &__h2{
+        font-family: $font__family--main;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 1.8rem; 
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        color: $font__color--text-medium;
+    }
+
+    &__h1{
+        font-family: $font__family--sec;
+        font-size: 5.6rem;
+        font-weight: 400;
+        line-height: 6rem;
+        letter-spacing: -1.2px;
+        color: $font__color--text-darkest;
+    }
+
+    &__h3{
+        text-align: center;
+        font-family: $font__family--sec;
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 3rem;
+        letter-spacing: -0.9px;
+        z-index: 2;
+    }
+
+    &__h3--light{
+        color:$font__color--text-light;
+    }
+
+    &__p{
+        color: $font__color--text-medium;
+        font-family:$font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem;
+    }
+
+    &__flex{
+        max-width: 40rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    &__container{
+        max-width: 350px;
+        height: 400px;
+    }
+
+    &__container--text{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        text-align: center;
+    }
+
+    &__container--dark{
+        background-color: $bg__color--dark;
+    }
+
+    &__icon{
+        z-index: 2;
+    }
+
+    &__shadow{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        z-index: 1;
+        width: 50%;
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+}
+
+
+@media only screen and (min-width:1000px) {
+    .sectionAbout{
+        margin: 0 auto;
+        padding: 8em 0;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: 2em;
+
+        &__grid{
+            display: grid;
+            grid-template-areas:
+                'area2 area1'
+                'area3 area4';
+            gap:  0 2em;
+        }
+
+        &__container{
+            &--area1{
+                grid-area: area1;
+                margin-top: 2em;
+            }
+            &--area2{
+                grid-area: area2;
+            }
+            &--area3{
+                grid-area: area3;
+                margin-bottom: 2em;
+            }
+            &--area4{
+                grid-area: area4;
+                align-self: flex-end;
+            }
+
+            &__container{
+                max-width: 450px;
+                height: 100%;
+                max-height: 600px ;
+            }
+        }
+    }
+}

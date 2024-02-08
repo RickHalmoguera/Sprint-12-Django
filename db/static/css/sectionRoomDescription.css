@@ -1,0 +1,107 @@
+.sectionRoomDescription {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  align-items: left;
+  padding: 2em 1em 4em 1em;
+}
+.sectionRoomDescription__p {
+  color: #777;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.sectionRoomDescription__h2 {
+  color: #111;
+  font-family: "Old Standard TT", serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem;
+}
+.sectionRoomDescription__h3 {
+  color: #BEAD8E;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+.sectionRoomDescription__img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.sectionRoomDescription__span {
+  color: #777;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.sectionRoomDescription__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sectionRoomDescription__ul {
+  width: 100%;
+  height: 260px;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  column-gap: 10em;
+}
+.sectionRoomDescription__li {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.sectionRoomDescription__profileContainer {
+  width: 16rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.sectionRoomDescription__profile {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.sectionRoomDescription__checkContainer {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.6rem;
+  height: 4.6rem;
+  background-color: #BEAD8E;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+}
+.sectionRoomDescription__profileText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .sectionRoomDescription {
+    max-width: 60%;
+  }
+  .sectionRoomDescription__ul {
+    grid-template-columns: repeat(3, 150px);
+  }
+}/*# sourceMappingURL=sectionRoomDescription.css.map */

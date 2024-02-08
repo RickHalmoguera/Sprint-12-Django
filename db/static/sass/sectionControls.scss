@@ -1,0 +1,33 @@
+@import "./variables.scss";
+
+.sectionControls{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+
+    &__button{
+        cursor:pointer;
+        background-color: $bg__color--light;
+        width: 5rem;
+        height: 5rem;
+        border: none;
+        color: #222;
+        text-align: center;
+        font-family: $font__family--extra;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.9rem; 
+        
+
+        
+        &--active{
+            background-color: $bg__color--medium;
+            color: $font__color--text-light;
+        }
+
+        &:hover{
+            border: 2px solid $font__color--text-mediumDark;
+        }
+    }
+}

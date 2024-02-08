@@ -12,6 +12,9 @@ class Room(models.Model):
     is_booked = models.BooleanField()
     amenities = models.JSONField()
     
+    def __str__(self):
+        return f'room {self.room_type}'
+    
 class Contact(models.Model):
     full_name = models.CharField(max_length = 255)
     email = models.CharField(max_length = 255)
@@ -19,6 +22,9 @@ class Contact(models.Model):
     subject = models.CharField(max_length = 255)
     text =  models.CharField(max_length = 255)
     date = models.DateField()
+    
+    def __str__(self):
+        return f'contact{self.full_name}'
     
 class Booking(models.Model):
     full_name = models.CharField(max_length = 255)
@@ -30,6 +36,9 @@ class Booking(models.Model):
     check_out = models.DateField()
     room_id = models.ForeignKey(Room, on_delete=models.CASCADE)
     status = models.CharField(max_length = 255)
+    
+    def __str__(self):
+        return f'booking{self.full_name}'
 
 
     

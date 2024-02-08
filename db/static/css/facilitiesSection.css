@@ -1,0 +1,25 @@
+.facilitiesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  align-items: center;
+  padding: 8em 1em 0 1em;
+  text-align: center;
+}
+.facilitiesSection__h2 {
+  font-family: "Archivo", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: #777;
+}
+.facilitiesSection__h1 {
+  font-family: "Old Standard TT", serif;
+  font-size: 5.6rem;
+  font-weight: 400;
+  line-height: 6rem;
+  letter-spacing: -1.2px;
+  color: #111;
+}/*# sourceMappingURL=facilitiesSection.css.map */

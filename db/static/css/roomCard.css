@@ -1,0 +1,82 @@
+.roomCard {
+  width: 100%;
+  background-color: #FFF;
+}
+.roomCard__img {
+  width: 100%;
+}
+.roomCard__icons {
+  z-index: 3;
+  width: 60%;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+.roomCard__h3 {
+  color: #111;
+  font-family: "Old Standard TT", serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.6rem;
+  letter-spacing: -1.2px;
+}
+.roomCard__a {
+  text-decoration: none;
+  color: #777;
+}
+.roomCard__a:visited {
+  color: #777;
+}
+.roomCard__p {
+  color: #777;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.roomCard__p--highlight {
+  color: #BEAD8E;
+  font-family: "Archivo", sans-serif;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.3rem;
+}
+.roomCard__span {
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.3rem;
+}
+.roomCard__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+.roomCard__section--text {
+  margin-top: -3rem;
+}
+.roomCard__section--price {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+.roomCard__button {
+  width: 10rem;
+  color: #C2C2C2;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: 0.5s;
+}
+.roomCard__button:hover {
+  cursor: pointer;
+  color: #BEAD8E;
+  font-size: 2rem;
+}/*# sourceMappingURL=roomCard.css.map */

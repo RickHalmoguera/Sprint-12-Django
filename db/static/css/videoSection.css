@@ -1,0 +1,59 @@
+.button {
+  width: 21rem;
+  height: 6rem;
+  color: #FFF;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  border: 2px solid rgba(255, 255, 255, 0.33);
+}
+.button--dark {
+  background-color: #BEAD8E;
+  border: none;
+}
+.button--light {
+  background-color: transparent;
+  margin-bottom: 5em;
+}
+
+.videoSection {
+  background-color: #222;
+  padding: 8em 1em 3em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  height: 85rem;
+}
+.videoSection__h2 {
+  color: #BEAD8E;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+.videoSection__h1 {
+  color: #FFF;
+  font-family: "Old Standard TT", serif;
+  font-size: 5.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 6rem;
+  letter-spacing: -1.2px;
+}
+.videoSection__p {
+  color: #C2C2C2;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.videoSection__video {
+  width: 100%;
+  height: 50%;
+}/*# sourceMappingURL=videoSection.css.map */

@@ -1,0 +1,152 @@
+@import "./variables.scss";
+
+.footer{
+    background-image: url("../images/footerBg.png");
+    
+    &__inner{
+        padding: 8em 1em 0em 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    &__section{
+       
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        
+    }
+
+    &__p{
+        color: $font__color--text-medium;
+        font-family: $font__family--main;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.6rem; 
+
+        &--bold{
+            color: $font__color--text-dark;
+            font-family: $font__family--extra;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -0.48px;
+        }
+    }
+
+    &__socials{
+        display: flex;
+        gap: 1em;
+    }
+
+    &__icon{
+        font-size: 2.4rem;
+        color: $font__color--text-medium;
+        
+        &:hover{
+            color: $font__color--highlight;
+            
+        }
+    }
+
+    &__h3{
+        color:$font__color--text-darkest ;
+        font-family: $font__family--sec;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem;
+    }
+
+    &__ul{
+        display: flex;
+        flex-direction: column;
+        
+        flex-wrap: wrap;
+        max-height: 30rem;
+    }
+
+    &__li{
+        list-style: none;
+        color: $font__color--text-medium;
+        font-family: $font__family--extra;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 4.8rem; 
+    }
+
+    &__card{
+        display: flex;
+        align-items: center;
+        gap: 2em;
+    }
+
+    &__img{
+        width: 4rem;
+        height: 4rem;
+    }
+    &__span{
+        display: block;
+
+        &--dark{
+            color: $font__color--text-dark;
+            font-family: $font__family--sec;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2.4rem; 
+        }
+
+        &--light{
+            color: $font__color--text-medium;
+            font-family: $font__family--main;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &__container{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 2em;
+    }
+
+    &__bottom{
+        background: $bg__color--mediumLight;
+    }
+    
+}
+
+@media only screen and (min-width:1000px) {
+    .footer{
+        background-image: url("../images/footerBg.png");
+        
+        &__inner{
+            max-width: 1420px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 2em;
+        }
+        &__section{
+            max-width: 370px;
+        }     
+
+        &__container{
+            max-width: 1420px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+          
+    }
+
+}

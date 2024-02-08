@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Old+Standard+TT:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+@import "./topContainer.scss";
+@import "./header.scss";
+@import "./nav.scss";
+@import "./logo.scss";
+@import "./sectionHero.scss"; 
+@import "./sectionCalendar.scss";
+@import "./sectionAbout.scss";
+@import "./sectionRoom.scss";
+@import "./sectionVideo.scss";
+@import "./sectionFacilities.scss"; 
+@import "./sectionMenu.scss";
+@import "./button.scss"; 
+@import "./swiperCore.scss";
+@import "./swiperPagination.scss";
+
+
+
+@import "./swiperColumn.scss";
+@import "./swiperFlex.scss";
+@import "./sectionDetails.scss";
+@import "./footer.scss";
+@import "./sectionHotelDescription.scss";
+@import "./sectionCounter.scss";
+@import "./swiper2Slide.scss"; 
+@import "./sectionRoomList.scss";
+@import "./roomCard.scss";
+@import "./sectionControls.scss";
+@import "./sectionRoomMain.scss";
+@import "./sectionRoomDescription.scss"; 
+@import "./swiperCore2Slide.scss";
+@import "./sectionOffers.scss";
+@import "./sectionPopularList.scss";
+@import "./sectionContactInfo.scss";
+@import "./sectionContactForm.scss";
+
+html{
+    font-size: 10px; 
+}
+  
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    min-width: 320px ;
+}
+                

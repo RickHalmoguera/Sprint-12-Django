@@ -1,0 +1,147 @@
+@import "./variables.scss";
+
+.sectionHotelDescription{
+    padding: 8em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    z-index: 0;
+    position: relative;
+
+    &__video{
+        margin: 0 auto;
+        width: 100%;
+        height: 270px;
+    }
+    
+    &__restaurant{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        .restaurant__container{
+            max-width: 481px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 2em;
+        }
+    }
+
+    
+
+    &__h1{
+        color: $font__color--text-darkest;
+        text-align: center;
+        font-family: $font__family--sec;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -1.16px;
+        
+
+        &--left{
+            text-align: left;
+            
+        }
+    }
+
+    &__h2{
+        color: $font__color--text-medium;
+        font-family: $font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+    }
+
+    &__icons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        justify-content: center;
+        width: 15rem;
+        height: 15rem;
+        text-align: center;
+    }
+
+    &__span{
+        color: $font__color--text-darkest;
+        text-align: center;
+        font-family: $font__family--main;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.4rem; 
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+    }
+
+    &__p{
+        color: $font__color--text-medium;
+        font-family: $font__family--main;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem; 
+    }
+
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    .sectionHotelDescription{
+        &__video{
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1170px;
+            height: 670px;
+        }
+
+        &__h1{
+            margin: 0 auto;
+            font-size: 7.2rem;
+            max-width: 1064px;
+            &--left{
+                
+                font-size: 4.8rem;
+            }
+    }
+    
+    &__icons{
+        min-width: 1000px;
+        margin: 0 auto;
+        max-width: 1420px;
+    }
+
+    
+    &__restaurant{
+        
+        flex-direction: row;
+        
+
+    }
+    &__img{
+        max-width:530px ;
+      
+    }
+
+}
+}
+

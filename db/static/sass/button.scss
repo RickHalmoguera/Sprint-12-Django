@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+.button{
+    width: 21rem;
+    height: 6rem;
+    color: $font__color--text-light;
+    font-family: $font__family--main;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    border: 2px solid rgba(255, 255, 255, 0.33);
+
+    &--dark{
+        background-color: $btn__color--dark;
+        border: none;
+    }
+
+    &--light{
+        background-color: transparent;
+        margin-bottom: 5em;
+    }
+}
