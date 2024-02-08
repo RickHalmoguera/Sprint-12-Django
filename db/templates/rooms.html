@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Rooms</title>
 </head>
 <body>
@@ -31,8 +31,8 @@
                     <li class="header__li"><a href="./contact.html" class="header__a">Contact</a></li>
                 </ul>
                 <div class="nav__iconContainer">
-                    <img src="./icons/user.svg" alt="user" class="nav__icon">
-                    <img src="./icons/search.svg" alt="search" class="nav__icon">
+                    <img src="{% static 'icons/user.svg' %}" alt="user" class="nav__icon">
+                    <img src="{% static 'icons/search.svg' %}" alt="search" class="nav__icon">
                 </div>
             </nav>
         </div>
@@ -49,7 +49,7 @@
     <section class="sectionHero">
         <div class="sectionHero__container">
             <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
-            <h1 class="sectionHero__h1">Ultimate Room</h1>
+            <h1 class="sectionHero__h1">Availables Rooms</h1>
             <div class="sectionHero__links">
                 <p class="sectionHero__p"><a href="./index.html" class="sectionHero__a">Home</a> | Rooms </p>
             </div>

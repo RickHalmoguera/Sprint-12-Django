@@ -50,27 +50,27 @@
             <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
             <h1 class="sectionHero__h1">The Perfect<br> Base For You</h1>
             <div class="sectionHero__btnContainer">
-                <button class="button button--dark">take a tour</button>
-                <button class="button button--light">learn more</button>
+                <button class="button button--dark"><a href="./about.html" class="button__a">take a tour</a></button>
+                <button class="button button--light"><a href="./.html" class="button__a">learn more</a></button>
             </div>
 
         </div>
     </section>
     <section class="sectionCalendar">
-        <div class="sectionCalendar__container">
+        <form class="sectionCalendar__form" method="GET" action="{% url 'available_rooms'%}">
             <div class="sectionCalendar__inputContainer">
                 <label for="arrivalDate" class="sectionCalendar__label">Arrival Date</label>
-                <input type="date" name="" id="arrival Date" class="sectionCalendar__input">
+                <input type="date" id="arrivalDate" name="arrival_date" class="sectionCalendar__input" required>
             </div>
             <div class="sectionCalendar__inputContainer">
                 <label for="departureDate" class="sectionCalendar__label">Departure Date</label>
-                <input type="date" name="" id="departureDate" class="sectionCalendar__input">
+                <input type="date"  id="departureDate"  name="departure_date" class="sectionCalendar__input" required>
             </div>
             <div class="sectionCalendar__btnContainer">
-                <button class="button button--dark">check avaliability</button>
+                <button class="button button--dark" type="submit">check avaliability</button>
             </div>
 
-        </div>
+        </form>
 
     </section>
 
@@ -106,59 +106,95 @@
         </div>
     </section>
 
+    
     <section class="sectionRoom">
         <h2 class="sectionRoom__h2">rooms</h2>
         <h1 class="sectionRoom__h1">Hand Picked Rooms</h1>
-        <div class="sectionRoom__swiperTop">
-             <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
-             <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
-             <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
-             <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
-             <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
-             <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
-             <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
+       
+        <div class="swiper swiperIndex">
+            <div class="swiper-wrapper swiperIndex__wrapper">
+                {% if single_bed %}
+                <div class="swiper-slide swiperIndex__swiperSlide">
+                    <div class="swiperIndex__slideTop">
+                        <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
+                   </div>
+                    <img src="{{single_bed.photo}}" alt="" class="swiperIndex__img">
+                    <div class="swiperIndex__swiperBottom swiperBotton">
+                        <h3 class="swiperBotton__h3">{{single_bed.room_type}}</h3>
+                        <p class="swiperBotton__p">{{single_bed.description}}</p>
+                        <p class="swiperBotton__p--highlight">${{single_bed.price_night}}<span class="swiperBotton__span">/Night</span></p>
+                    </div>
+                </div>
+                {% endif %}
+                {% if double_bed %}
+                <div class="swiper-slide swiperIndex__swiperSlide">
+                    <div class="swiperIndex__slideTop">
+                        <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
+                   </div>
+                    <img src="{{double_bed.photo}}" alt="" class="swiperIndex__img">
+                    <div class="swiperIndex__swiperBottom swiperBotton">
+                        <h3 class="swiperBotton__h3">{{double_bed.room_type}}</h3>
+                        <p class="swiperBotton__p">{{double_bed.description}}</p>
+                        <p class="swiperBotton__p--highlight">${{double_bed.price_night}}<span class="swiperBotton__span">/Night</span></p>
+                    </div>
+                </div>
+                {% endif %}
+                {% if double_superior %}
+                <div class="swiper-slide swiperIndex__swiperSlide">
+                    <div class="swiperIndex__slideTop">
+                        <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
+                   </div>
+                    <img src="{{ double_superior.photo }}" alt="" class="swiperIndex__img">
+                    <div class="swiperIndex__swiperBottom swiperBotton">
+                        <h3 class="swiperBotton__h3">{{double_superior.room_type}}</h3>
+                        <p class="swiperBotton__p">{{double_superior.description}}</p>
+                        <p class="swiperBotton__p--highlight">${{double_superior.price_night}}<span class="swiperBotton__span">/Night</span></p>
+                    </div>
+                </div>
+                {% endif %}
+                {% if suite %}
+                <div class="swiper-slide swiperIndex__swiperSlide">
+                    <div class="swiperIndex__slideTop">
+                        <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
+                        <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
+                   </div>
+                    <img src="{{suite.photo}}" alt="" class="swiperIndex__img">
+                    <div class="swiperIndex__swiperBottom swiperBotton">
+                        <h3 class="swiperBotton__h3">{{suite.room_type}}</h3>
+                        <p class="swiperBotton__p">{{suite.description}}</p>
+                        <p class="swiperBotton__p--highlight">${{suite.price_night}}<span class="swiperBotton__span">/Night</span></p>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
         </div>
-        <div class="swiper swiperCore">
-            <div class="swiper-wrapper swiperCore__wrapper">
-              
-            <div class="swiper-slide">
-                <img src="{% static 'images/room2.jpg' %}" alt="" class="swiperCore__img">
-            </div>
-           
-            
-            <div class="swiper-slide">
-                <img src="{% static 'images/room4.jpg' %}" alt="" class="swiperCore__img">
-            </div>
-            <div class="swiper-slide">
-                <img src="{% static 'images/room5.jpg' %}" alt="" class="swiperCore__img">
-            </div>
 
-            <div class="swiper-slide">
-                <img src="{% static 'images/room2.jpg' %}" alt="" class="swiperCore__img">
-            </div>
-           
-            
-            <div class="swiper-slide">
-                <img src="{% static 'images/room4.jpg' %}" alt="" class="swiperCore__img">
-            </div>
-            <div class="swiper-slide">
-                <img src="{% static 'images/room5.jpg' %}" alt="" class="swiperCore__img">
-            </div>
-            
-            
-            </div>
-            <div class="swiper-button-next swiperCore__button swiperCore__button--next"></div>
-            <div class="swiper-button-prev swiperCore__button swiperCore__button--prev"></div>
-        </div>
-
-        <div class="sectionRoom__swiperBottom">
-            <div class="sectionRoom__container">
-                <h3 class="sectionRoom__h3">Minimal Duplex Room</h3>
-                <p class="sectionRoom__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-            </div>
-            <p class="sectionRoom__p--highlight">$345<span class="sectionRoom__span">/Night</span></p>
-        </div>
+        
     </section>
+   
     
     <section class="sectionVideo">
         <div class="sectionVideo__container">

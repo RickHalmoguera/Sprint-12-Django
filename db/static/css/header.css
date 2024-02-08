@@ -26,6 +26,9 @@
   font-weight: 600;
   line-height: normal;
 }
+.header__li:visited {
+  color: #111;
+}
 .header__a {
   text-decoration: none;
 }

@@ -11,6 +11,13 @@
     text-transform: uppercase;
     border: 2px solid rgba(255, 255, 255, 0.33);
 
+    &__a{
+        color: $font__color--text-light;
+        text-decoration: none;
+        &:visited{
+            color: $font__color--text-light;
+        }
+    }
     &--dark{
         background-color: $btn__color--dark;
         border: none;

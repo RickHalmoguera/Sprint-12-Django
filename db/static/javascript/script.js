@@ -20,18 +20,18 @@ const handleMenu = () =>{
   }
 }
 
-const swiperCore = new Swiper(".swiperCore", {
+const swiperIndex = new Swiper(".swiperIndex", {
   slidesPerView: 1,
   centeredSlides: true,
   spaceBetween: 30,
   loop:true,
-  navigation: {
-    nextEl: '.swiperCore__button--next',
-    prevEl: '.swiperCore__button--prev',
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
   breakpoints:{
     1000:{
-      slidesPerView: 3
+      slidesPerView: 2
     }
   }
   

@@ -54,37 +54,10 @@
   font-weight: 700;
   line-height: 4.3rem;
 }
-.sectionRoom__swiperTop {
-  z-index: 3;
-  width: 70%;
-  max-width: 350px;
-  background-color: #FFF;
-  display: flex;
-  justify-content: space-between;
-  padding: 2em;
-  margin-bottom: -5.5rem;
-}
-.sectionRoom__swiperBottom {
-  margin-top: -5.5rem;
-  z-index: 3;
-  width: 90%;
-  background-color: #FFF;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1em;
-  padding: 2em;
-}
 
 @media only screen and (min-width: 1000px) {
   .sectionRoom {
     max-width: 1420px;
     margin: 0 auto;
-  }
-  .sectionRoom__swiperBottom {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-    max-width: 30%;
   }
 }/*# sourceMappingURL=sectionRoom.css.map */

@@ -1,0 +1,60 @@
+.sectionContactForm {
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.sectionContactForm__topGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.sectionContactForm__group {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.sectionContactForm__input {
+  height: 6.7rem;
+  background-color: #F8F8F8;
+  border: none;
+  width: 100%;
+  padding: 1em 3em;
+}
+.sectionContactForm__input--center {
+  align-self: center;
+}
+.sectionContactForm__textArea {
+  background-color: #F8F8F8;
+  border: none;
+  padding: 1em 3em;
+  width: 100%;
+}
+.sectionContactForm__container {
+  position: relative;
+}
+.sectionContactForm__img {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  transform: translateY(-50%);
+}
+.sectionContactForm__img--top {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .sectionContactForm {
+    margin: 0 auto;
+    max-width: 1420px;
+  }
+  .sectionContactForm__topGroup {
+    width: 100%;
+    flex-direction: row;
+  }
+  .sectionContactForm__group {
+    width: 100%;
+  }
+}/*# sourceMappingURL=sectionContactForm.css.map */

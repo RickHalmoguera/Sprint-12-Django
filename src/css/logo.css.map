@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../db/static/sass/logo.scss","../../db/static/sass/variables.scss"],"names":[],"mappings":"AAEA;EACI;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI,kBCXM;;ADcV;EACI,kBCjBO;;ADqBf;EACI;EACA,aCLa;EDMb;EACA;EACA;EACA;;AAGJ;EACI,OCjBoB;EDkBpB,aCda;EDeb;EACA;EACA;EACA;EACA;;AAGJ;EACI;;AAEJ;EACI","file":"logo.css"}

@@ -1,19 +1,19 @@
 from django.db import models
 
 class Room(models.Model):
-    photos = models.CharField(max_length = 255)
+    photo = models.CharField(max_length = 255)
     room_type = models.CharField(max_length = 255)
     room_number = models.IntegerField()
     description = models.CharField(max_length = 255)
     offer = models.BooleanField()
-    price_night = models.IntegerField
+    price_night = models.IntegerField()
     discount = models.IntegerField()
     cancellation = models.CharField(max_length = 255)
     is_booked = models.BooleanField()
     amenities = models.JSONField()
     
     def __str__(self):
-        return f'room {self.room_type}'
+        return f'rooms {self.room_type}'
     
 class Contact(models.Model):
     full_name = models.CharField(max_length = 255)

@@ -1,0 +1,42 @@
+.logo {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.logo__square {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.29);
+}
+.logo__square--light {
+  background-color: #FFF;
+}
+.logo__square--highlight {
+  background-color: #BEAD8E;
+}
+.logo__span {
+  text-transform: uppercase;
+  font-family: "Archivo", sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.3rem;
+}
+.logo__text {
+  color: #111;
+  font-family: "Archivo", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+}
+.logo__p--regular {
+  font-weight: 400;
+}
+.logo__p--bold {
+  font-weight: 700;
+}/*# sourceMappingURL=logo.css.map */
