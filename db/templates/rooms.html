@@ -14,7 +14,7 @@
             <p class="topContainer__p">We Make Your Feel Comfortable</p>
         
             <nav class="nav">
-                <img src="./icons/Menu.svg" alt="Menu" class="nav__icon" id="menuBtn">
+                <img src="{% static 'icons/Menu.svg' %}" alt="Menu" class="nav__icon" id="menuBtn">
                 <div class="nav__logo logo">
                     <div class="logo__square logo__square--light">
                         <span class="logo__span">h</span>
@@ -49,7 +49,7 @@
     <section class="sectionHero">
         <div class="sectionHero__container">
             <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
-            <h1 class="sectionHero__h1">Availables Rooms</h1>
+            <h1 class="sectionHero__h1">Available Rooms</h1>
             <div class="sectionHero__links">
                 <p class="sectionHero__p"><a href="./index.html" class="sectionHero__a">Home</a> | Rooms </p>
             </div>
@@ -58,149 +58,59 @@
     </section>
 
     <section class="sectionRoomList">
+        {% for room in rooms %}
         <div class="roomCard">
             <div class="roomCard__section">
-                <img src="./images/room1.jpg" alt="" class="roomCard__img">
+                <img src="{{room.photo}}" alt="" class="roomCard__img">
             </div>
             <div class="roomCard__section--text">
                 <div class="roomCard__section">
                     <div class="roomCard__icons">
-                        <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
+                        <img src="{% static 'icons/bed.svg' %}" alt="" class="roomCard__icon">
+                        <img src="{% static 'icons/wifi.svg' %}" alt="" class="roomCard__icon">
+                        <img src="{% static 'icons/parking.svg' %}" alt="" class="roomCard__icon">
+                        <img src="{% static 'icons/cold.svg' %}" alt="" class="roomCard__icon">
+                        <img src="{% static 'icons/gym.svg' %}" alt="" class="roomCard__icon">
+                        <img src="{% static 'icons/smoking.svg' %}" alt="" class="roomCard__icon">
+                        <img src="{% static 'icons/cocktail.svg' %}" alt="" class="roomCard__icon">
                     </div> 
-                    <h3 class="roomCard__h3">Minimal Duplex Room</h3>
-                    <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
+                    <h3 class="roomCard__h3">{{room.room_type}}</h3>
+                    <p class="roomCard__p">{{room.description}}</p>
                     
                     <div class="roomCard__section roomCard__section--price">
-                        <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
+                        <p class="roomCard__p--highlight">${{room.price_night}}<span class="roomCard__span">/Night</span></p>
                         <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="roomCard">
-            <div class="roomCard__section">
-                <img src="./images/room1.jpg" alt="" class="roomCard__img">
-            </div>
-            <div class="roomCard__section--text">
-                <div class="roomCard__section">
-                    <div class="roomCard__icons">
-                        <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
-                    </div>
-                    <h3 class="roomCard__h3">Minimal Duplex Room</h3>
-                    <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                    
-                    <div class="roomCard__section roomCard__section--price">
-                        <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
-                        <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="roomCard">
-            <div class="roomCard__section">
-                <img src="./images/room1.jpg" alt="" class="roomCard__img">
-            </div>
-            <div class="roomCard__section--text">
-                <div class="roomCard__section">
-                    <div class="roomCard__icons">
-                        <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
-                    </div>
-                    <h3 class="roomCard__h3">Minimal Duplex Room</h3>
-                    <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                    
-                    <div class="roomCard__section roomCard__section--price">
-                        <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
-                        <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="roomCard">
-            <div class="roomCard__section">
-                <img src="./images/room1.jpg" alt="" class="roomCard__img">
-            </div>
-            <div class="roomCard__section--text">
-                <div class="roomCard__section">
-                    <div class="roomCard__icons">
-                        <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
-                    </div>
-                    <h3 class="roomCard__h3">Minimal Duplex Room</h3>
-                    <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                    
-                    <div class="roomCard__section roomCard__section--price">
-                        <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
-                        <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="roomCard">
-            <div class="roomCard__section">
-                <img src="./images/room1.jpg" alt="" class="roomCard__img">
-            </div>
-            <div class="roomCard__section--text">
-                <div class="roomCard__section">
-                    <div class="roomCard__icons">
-                        <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                        <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
-                    </div>
-                    <h3 class="roomCard__h3">Minimal Duplex Room</h3>
-                    <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                    
-                    <div class="roomCard__section roomCard__section--price">
-                        <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
-                        <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </section>
 
-    <div class="sectionControls">
-        <button class="sectionControls__button">
-            <img src="./icons/doubleArrowL.svg" alt="">
-        </button>
-        <button class="sectionControls__button">
-            <p class="sectionControls__p">1</p>
-        </button>
-        <button class="sectionControls__button sectionControls__button--active">
-            <p class="sectionControls__p">2</p>
-        </button><button class="sectionControls__button">
-            <p class="sectionControls__p">3</p>
-        </button>
-        <button class="sectionControls__button">
-            <img src="./icons/doubleArrowR.svg" alt="">
-        </button>
-    </div>
+   
+    <section class="sectionControls">
+        {% if rooms.has_previous %}
+        <a class="sectionControls__button" href="?page=1">
+            <img src="{% static 'icons/doubleArrowL.svg' %}" alt="">
+        </a>
+        <a class="sectionControls__button" href="?page={{ rooms.previous_page_number }}">
+            <img src="{% static 'icons/singleArrowL.svg' %}" alt="">
+        </a>
+        {% endif %}
+        {% for num in rooms.paginator.page_range %}
+        <a class="sectionControls__button {% if num == rooms.number %}sectionControls__button--active{% endif %}" href="?page={{ num }}">
+            <p class="sectionControls__p">{{ num }}</p>
+        </a>
+        {% endfor %}
+        {% if rooms.has_next %}
+        <a class="sectionControls__button" href="?page={{ rooms.next_page_number }}">
+            <img src="{% static 'icons/singleArrowR.svg' %}" alt="">
+        </a>
+        <a class="sectionControls__button" href="?page={{ rooms.paginator.num_pages }}">
+            <img src="{% static 'icons/doubleArrowR.svg' %}" alt="">
+        </a>
+        {% endif %}
+    </section>
     <footer class="footer">
         <div class="footer__inner">
                 
