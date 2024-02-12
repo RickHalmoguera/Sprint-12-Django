@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from webpage.models import Booking
-from webpage.models import Contact
-from webpage.models import Room
+from db.models import Booking
+from db.models import Contact
+from db.models import Room
 
 def create_booking(request, template_name='details.html'):
     if request.method == 'POST':
