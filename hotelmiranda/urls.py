@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from db.views import *
+from webpage.views import *
 
 
 urlpatterns = [
@@ -24,7 +24,6 @@ urlpatterns = [
     path('index.html', index, name='index'),
     path('about.html', about, name='about'),
     path('rooms.html', rooms, name='available_rooms'),
-    path('offers.html', offers, name='offers'),
     path('contact.html', contact_create, name='contacts'),
 ]
 

@@ -1,1 +1,0 @@
-{"version":3,"sourceRoot":"","sources":["../../db/static/sass/sectionDetails.scss","../../db/static/sass/variables.scss"],"names":[],"mappings":"AAEA;EACI,kBCFa;;ADIb;EACI;EACA;EACA;EACA;EACA;EACA;;AAIJ;EACI,OCLkB;EDMlB,aCMc;EDLd;EACA;EACA;EACA;;AAEA;EACI;;AAKR;EACI;EACA,OChBsB;EDiBtB,aCTc;EDUd;EACA;EACA;EACA;;;AAIR;EAEQ;IACI;IACA;IACA;IACA;IACA","file":"sectionDetails.css"}
