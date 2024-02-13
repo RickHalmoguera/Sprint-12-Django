@@ -79,7 +79,7 @@
                     
                     <div class="roomCard__section roomCard__section--price">
                         <p class="roomCard__p--highlight">${{room.price_night}}<span class="roomCard__span">/Night</span></p>
-                        <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
+                        <p class="roomCard__button"><a class="roomCard__a" href="{% url 'room_details' room.id %}">Book Now</a></p>
                     </div>
                 </div>
             </div>
@@ -93,9 +93,6 @@
         <a class="sectionControls__button" href="?page=1">
             <img src="{% static 'icons/doubleArrowL.svg' %}" alt="">
         </a>
-        <a class="sectionControls__button" href="?page={{ rooms.previous_page_number }}">
-            <img src="{% static 'icons/singleArrowL.svg' %}" alt="">
-        </a>
         {% endif %}
         {% for num in rooms.paginator.page_range %}
         <a class="sectionControls__button {% if num == rooms.number %}sectionControls__button--active{% endif %}" href="?page={{ num }}">
@@ -103,9 +100,6 @@
         </a>
         {% endfor %}
         {% if rooms.has_next %}
-        <a class="sectionControls__button" href="?page={{ rooms.next_page_number }}">
-            <img src="{% static 'icons/singleArrowR.svg' %}" alt="">
-        </a>
         <a class="sectionControls__button" href="?page={{ rooms.paginator.num_pages }}">
             <img src="{% static 'icons/doubleArrowR.svg' %}" alt="">
         </a>
@@ -160,21 +154,21 @@
                 
                 <h3 class="footer__h3">Contact Us.</h3>
                 <div class="footer__card">
-                    <img src="./icons//phone.svg" alt="" class="footer__img">
+                    <img src="{% static '/icons//phone.svg' %}" alt="" class="footer__img">
                     <div class="footer__text">
                         <span class="footer__span footer__span--dark">Phone Number</span>
                         <span class="footer__span footer__span--light">+987 876 765 76 577</span>
                     </div>
                 </div>
                 <div class="footer__card">
-                    <img src="./icons//mail.svg" alt="" class="footer__img">
+                    <img src="{% static '/icons//mail.svg' %}" alt="" class="footer__img">
                     <div class="footer__text">
                         <span class="footer__span footer__span--dark">Phone Number</span>
                         <span class="footer__span footer__span--light">+987 876 765 76 577</span>
                     </div>
                 </div>
                 <div class="footer__card">
-                    <img src="./icons//location.svg" alt="" class="footer__img">
+                    <img src="{% static '/icons//location.svg' %}" alt="" class="footer__img">
                     <div class="footer__text">
                         <span class="footer__span footer__span--dark">Phone Number</span>
                         <span class="footer__span footer__span--light">+987 876 765 76 577</span>

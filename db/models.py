@@ -28,7 +28,7 @@ class Booking(models.Model):
     order_date = models.DateField()
     check_in = models.DateField()
     check_out = models.DateField()
-    room_id = models.ForeignKey(Room, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
     status = models.CharField(max_length = 255)
     
 

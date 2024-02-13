@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Room Details</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
             <p class="topContainer__p">We Make Your Feel Comfortable</p>
         
             <nav class="nav">
-                <img src="./icons/Menu.svg" alt="Menu" class="nav__icon" id="menuBtn">
+                <img src="{% static 'icons/Menu.svg' %}" alt="Menu" class="nav__icon" id="menuBtn">
                 <div class="nav__logo logo">
                     <div class="logo__square logo__square--light">
                         <span class="logo__span">h</span>
@@ -31,8 +31,8 @@
                     <li class="header__li"><a href="./contact.html" class="header__a">Contact</a></li>
                 </ul>
                 <div class="nav__iconContainer">
-                    <img src="./icons/user.svg" alt="user" class="nav__icon">
-                    <img src="./icons/search.svg" alt="search" class="nav__icon">
+                    <img src="{% static 'icons/user.svg' %}" alt="user" class="nav__icon">
+                    <img src="{% static 'icons/search.svg' %}" alt="search" class="nav__icon">
                 </div>
             </nav>
         </div>
@@ -47,7 +47,7 @@
     </header>
     <section class="sectionHero">
         <div class="sectionHero__container">
-            <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
+            <h2 class="sectionHero__h2">{room.room_type}</h2>
             <h1 class="sectionHero__h1">Ultimate Room</h1>
             <div class="sectionHero__links">
                 <p class="sectionHero__p"><a href="./index.html" class="sectionHero__a">Home</a> | Rooms Details </p>
@@ -59,121 +59,112 @@
     <section class="sectionRoomMain">
         <div class="sectionRoomMain__flex">
             <div class="sectionRoomMain__container">
-                <h2 class="sectionRoomMain__h2">double bed</h2>
-                <h1 class="sectionRoomMain__h1">Luxury Double Bed </h1>
+                <h2 class="sectionRoomMain__h2">{{room.room_type}}</h2>
+                <h1 class="sectionRoomMain__h1">Luxury {{room.room_type}} </h1>
             </div>
-            <p class=" sectionRoomMain__p sectionRoomMain__p--highlight">$345<span class="sectionRoomMain__span">/Night</span></p>
+            <p class=" sectionRoomMain__p sectionRoomMain__p--highlight">{{room.price_night}}<span class="sectionRoomMain__span">/Night</span></p>
         </div>
-        <img src="./images/room2.jpg" alt="" class="sectionRoomMain__img">
-        <div class="sectionRoomMain__calendar">
+        <img src={{room.photo}} alt="" class="sectionRoomMain__img">
+        <form class="sectionRoomMain__calendar" method="POST">
             <h4 class="sectionRoomMain__h4">Check Availability</h4>
+            {% csrf_token %}
             <div class="sectionRoomMain__inputsContainer">
-                <label for="arrivalDate" class="sectionRoomMain__label">Check In</label>
-                <input type="date" name="" id="arrival Date" class="sectionRoomMain__input">
+                <label class="sectionRoomMain__label">Check In</label>
+                {{ form.check_in }}
 
-                <label for="departureDate" class="sectionRoomMain__label">Check Out</label>
-                <input type="date" name="" id="departureDate" class="sectionRoomMain__input">
+                <label class="sectionRoomMain__label">Check Out</label>
+               {{ form.check_out }}
 
-                <label for="Name" class="sectionRoomMain__label">Full Name</label>
-                <input type="text" name="" id="Name" class="sectionRoomMain__input">
+                <label class="sectionRoomMain__label">Full Name</label>
+                {{ form.full_name }}
 
-                <label for="email" class="sectionRoomMain__label">Email</label>
-                <input type="email" name="" id="email" class="sectionRoomMain__input">
+                <label class="sectionRoomMain__label">Email</label>
+                {{ form.email }}
 
-                <label for="phone" class="sectionRoomMain__label">Phone</label>
-                <input type="text" name="" id="phone" class="sectionRoomMain__input">
+                <label class="sectionRoomMain__label">Phone</label>
+                {{ form.phone }}
 
-                <label for="message" class="sectionRoomMain__label">Message (Special request)</label>
-                <textarea rows="3" name="" id="message" class="sectionRoomMain__input"></textarea>
+                <label class="sectionRoomMain__label">Message (Special request)</label>
+                {{ form.message }}
                 
             </div>
-            <button class="button button--dark">check avaliability</button> 
-        </div>
+            <button class="button button--dark" type="submit">check avaliability</button> 
+        </form>
          
     </section>
 
     <section class="sectionRoomDescription">
         <p class="sectionRoomDescription__p">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis 
-            unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
-            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-            magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem 
-            ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora 
-            incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+           {{room.description}}
         </p>
         <h2 class="sectionRoomDescription__h2">Amenities</h2>
     
         <div class="sectionRoomDescription__flex">
             <ul class="sectionRoomDescription__ul">
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/AC.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/AC.svg' %}"alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Air conditioner</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/breakfastSmall.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/breakfastSmall.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Breakfast</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/cleaning.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/cleaning.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Cleaning</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/grocery.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/grocery.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Grocery</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/shop.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/shop.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Shop Near</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/online.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/online.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">24/7 Online Support</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/security.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/security.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Smart Security</span>
                 </li>
             
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/wifiSmall.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/wifiSmall.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">High Speed WiFi</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/kitchen.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/kitchen.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Kitchen</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/shower.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/shower.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Shower</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/bedSmall.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/bedSmall.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Single Bed</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/towel.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/towel.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Towels</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/key.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/key.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Strong Locker</span>
                 </li>
                 <li class="sectionRoomDescription__li">
-                    <img src="./icons/teamSmall.svg" alt="" class="sectionRoomDescription__img">
+                    <img src="{% static 'icons/teamSmall.svg' %}" alt="" class="sectionRoomDescription__img">
                     <span class="sectionRoomDescription__span">Expert Team</span>
                 </li>
             </ul>
         </div>    
 
         <div class="sectionRoomDescription__profileContainer">
-            <img src="./images/ceo.jpg" alt="" class="sectionRoomDescription__profile">
+            <img src="{% static 'images/ceo.jpg' %}" alt="" class="sectionRoomDescription__profile">
             <div class="sectionRoomDescription__checkContainer">
-                <img src="./icons/check.svg" alt="" class="sectionRoomDescription__profileCheck">
+                <img src="{% static 'icons/check.svg' %}" alt="" class="sectionRoomDescription__profileCheck">
             </div>
         </div>
         <div class="sectionRoomDescription__profileText">
@@ -199,18 +190,18 @@
                 <div class="swiper-slide swiperCore2Slide__slide">
                     <div class="roomCard">
                         <div class="roomCard__section">
-                            <img src="./images/room1.jpg" alt="" class="swiperCore2Slide__img">
+                            <img src="{% static 'images/room1.jpg' %}" alt="" class="swiperCore2Slide__img">
                         </div>
                         <div class="roomCard__section--text">
                             <div class="roomCard__section">
                                 <div class="roomCard__icons">
-                                    <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/bed.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/wifi.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/parking.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/cold.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/gym.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/smoking.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/cocktail.svg' %}" alt="" class="roomCard__icon">
                                 </div>
                                 <h3 class="roomCard__h3">Minimal Duplex Room</h3>
                                 <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
@@ -231,18 +222,18 @@
                 <div class="swiper-slide swiperCore2Slide__slide">
                     <div class="roomCard">
                         <div class="roomCard__section">
-                            <img src="./images/room2.jpg" alt="" class="swiperCore2Slide__img">
+                            <img src="{% static 'images/room2.jpg' %}" alt="" class="swiperCore2Slide__img">
                         </div>
                         <div class="roomCard__section--text">
                             <div class="roomCard__section">
                                 <div class="roomCard__icons">
-                                    <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/bed.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/wifi.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/parking.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/cold.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/gym.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/smoking.svg' %}" alt="" class="roomCard__icon">
+                                    <img src="{% static 'icons/cocktail.svg' %}" alt="" class="roomCard__icon">
                                 </div>
                                 <h3 class="roomCard__h3">Minimal Duplex Room</h3>
                                 <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
@@ -315,21 +306,21 @@
                 
                 <h3 class="footer__h3">Contact Us.</h3>
                 <div class="footer__card">
-                    <img src="./icons//phone.svg" alt="" class="footer__img">
+                    <img src="{% static '/icons//phone.svg' %}" alt="" class="footer__img">
                     <div class="footer__text">
                         <span class="footer__span footer__span--dark">Phone Number</span>
                         <span class="footer__span footer__span--light">+987 876 765 76 577</span>
                     </div>
                 </div>
                 <div class="footer__card">
-                    <img src="./icons//mail.svg" alt="" class="footer__img">
+                    <img src="{% static '/icons//mail.svg' %}" alt="" class="footer__img">
                     <div class="footer__text">
                         <span class="footer__span footer__span--dark">Phone Number</span>
                         <span class="footer__span footer__span--light">+987 876 765 76 577</span>
                     </div>
                 </div>
                 <div class="footer__card">
-                    <img src="./icons//location.svg" alt="" class="footer__img">
+                    <img src="{% static '/icons//location.svg' %}" alt="" class="footer__img">
                     <div class="footer__text">
                         <span class="footer__span footer__span--dark">Phone Number</span>
                         <span class="footer__span footer__span--light">+987 876 765 76 577</span>
@@ -347,5 +338,5 @@
 </body>
 <script src="https://kit.fontawesome.com/c45d098780.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./javascript/script.js"></script>
+<script src="{% static '/javascript/script.js' %}"></script>
 </html>

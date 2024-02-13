@@ -16,6 +16,9 @@
   font-style: normal;
   font-weight: 700;
   line-height: 1.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sectionControls__button--active {
   background-color: #BEAD8E;

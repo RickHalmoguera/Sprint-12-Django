@@ -9,6 +9,13 @@
   text-transform: uppercase;
   border: 2px solid rgba(255, 255, 255, 0.33);
 }
+.button__a {
+  color: #FFF;
+  text-decoration: none;
+}
+.button__a:visited {
+  color: #FFF;
+}
 .button--dark {
   background-color: #BEAD8E;
   border: none;

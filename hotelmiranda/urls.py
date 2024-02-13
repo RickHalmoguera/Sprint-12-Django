@@ -24,7 +24,8 @@ urlpatterns = [
     path('index', index, name='index'),
     path('about', about, name='about'),
     path('rooms', rooms, name='available_rooms'),
-    path('contact', contact_create, name='contacts'),
+    path('details/<int:id>/', manage_room_details, name='room_details'),
+    
 ]
 
 
