@@ -1,10 +1,24 @@
 
 const menuBtn = document.getElementById("menuBtn")
 const navUl = document.getElementById("dropMenu")
+const feedbackContainer = document.getElementById("feedbackContainer")
+const roomForm = document.getElementById("roomForm")
+const roomFormBtn = document.getElementById("roomFormBtn")
+
 
 const xSrc = "./icons/close.svg"
 const menuSrc ="./icons/Menu.svg"
 
+
+const displayFeedback = ()=>{
+  roomForm.style.display = "none"
+  feedbackContainer.style.display= "flex"
+  setTimeout(() => {
+    roomForm.style.display = "flex"
+    feedbackContainer.style.display= "none"
+  }, "3000")
+
+}
 let isOpen = false
 let isClosed = false
 
@@ -151,3 +165,6 @@ const swiperFoodPhotos = new Swiper (".swiperFoodPhotos",{
 
 
 menuBtn.addEventListener('click',handleMenu)
+roomForm.addEventListener('submit',displayFeedback)
+
+

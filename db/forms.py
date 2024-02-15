@@ -1,8 +1,5 @@
 from django import forms
-from db.models import *
-from django import forms
-
-
+from db.models import Booking
 
 class BookingForm(forms.ModelForm):
     class Meta:
@@ -16,3 +13,7 @@ class BookingForm(forms.ModelForm):
             'phone': forms.TextInput(attrs={'class': 'sectionRoomMain__input', 'placeholder': 'Phone'}),
             'message': forms.Textarea(attrs={'class': 'sectionRoomMain__input', 'cols': 30, 'rows': 5, 'placeholder': 'Message'})
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['message'].required = False

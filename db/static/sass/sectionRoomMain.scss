@@ -36,6 +36,17 @@
         color: $font__color--text-darkest;
         font-family: $font__family--main;
         text-align: center;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.54px;
+    }
+
+    &__h4{
+        color: $font__color--text-darkest;
+        font-family: $font__family--main;
+        text-align: center;
         font-size: 1.8rem;
         font-style: normal;
         font-weight: 700;
@@ -82,6 +93,15 @@
         line-height: 4.3rem;
     }
 
+    &__feedback{
+        height: 783px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+        text-align: center;
+    }
+
     &__calendar{
         display: flex;
         flex-direction: column;
@@ -117,6 +137,7 @@
     }
 }
 
+
 @media only screen and (min-width:1000px) {
     .sectionRoomMain{
         flex-direction: row;
@@ -131,6 +152,7 @@
         top: 8em;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 2em;
         }
 

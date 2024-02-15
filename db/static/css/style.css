@@ -1696,6 +1696,16 @@
   color: #111;
   font-family: "Archivo", sans-serif;
   text-align: center;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+}
+.sectionRoomMain__h4 {
+  color: #111;
+  font-family: "Archivo", sans-serif;
+  text-align: center;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 700;
@@ -1733,6 +1743,14 @@
   font-style: normal;
   font-weight: 700;
   line-height: 4.3rem;
+}
+.sectionRoomMain__feedback {
+  height: 783px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  text-align: center;
 }
 .sectionRoomMain__calendar {
   display: flex;
@@ -1779,6 +1797,7 @@
     top: 8em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 2em;
   }
   .sectionRoomMain__img {

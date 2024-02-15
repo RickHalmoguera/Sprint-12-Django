@@ -23,8 +23,13 @@
         <p class=" sectionRoomMain__p sectionRoomMain__p--highlight">{{room.price_night}}<span class="sectionRoomMain__span">/Night</span></p>
     </div>
     <img src={{room.photo}} alt="" class="sectionRoomMain__img">
-    <form class="sectionRoomMain__calendar" method="POST">
-        <h4 class="sectionRoomMain__h4">Check Availability</h4>
+    <div class="sectionRoomMain__feedback" id="feedbackContainer">
+        <h4 class="sectionRoomMain__h4">¡Thank you for your request!</h4>
+        <p class="sectionRoomDescription__p">We have received it correctly. Someone from our Team will get back to you very soon.</p>    
+        <p class="sectionRoomDescription__p">The Miranda Hotel</p>
+    </div>
+    <form class="sectionRoomMain__calendar" method="POST"  id="roomForm">
+        <h3 class="sectionRoomMain__h3">Check Availability</h3>
         {% csrf_token %}
         <div class="sectionRoomMain__inputsContainer">
             <label class="sectionRoomMain__label">Check In</label>
@@ -46,7 +51,7 @@
             {{ form.message }}
             
         </div>
-        <button class="button button--dark" type="submit">check avaliability</button> 
+        <button class="button button--dark" type="submit" id="roomFormBtn">check avaliability</button> 
     </form>
     {% if messages %}
     <div id="message" class="message {% if message.tags %}{{ message.tags }}{% endif %}">
@@ -57,8 +62,8 @@
 </section>
 
 <section class="sectionRoomDescription">
-    <p class="sectionRoomDescription__p">
-        {{room.description}}
+    <p  class="sectionRoomDescription__p">
+            {{room.description}}
     </p>
     <h2 class="sectionRoomDescription__h2">Amenities</h2>
 
