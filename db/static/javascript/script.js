@@ -3,7 +3,7 @@ const menuBtn = document.getElementById("menuBtn")
 const navUl = document.getElementById("dropMenu")
 const feedbackContainer = document.getElementById("feedbackContainer")
 const roomForm = document.getElementById("roomForm")
-const roomFormBtn = document.getElementById("roomFormBtn")
+
 
 
 const xSrc = "./icons/close.svg"
@@ -17,8 +17,8 @@ const displayFeedback = ()=>{
     roomForm.style.display = "flex"
     feedbackContainer.style.display= "none"
   }, "3000")
-
 }
+
 let isOpen = false
 let isClosed = false
 

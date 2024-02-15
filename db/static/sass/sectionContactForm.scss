@@ -31,6 +31,15 @@
         }
     }
 
+    &__feedback{
+        height: 300px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+        text-align: center;
+    }
+
     &__textArea{
         background-color: $bg__color--mediumLight;
         border: none;

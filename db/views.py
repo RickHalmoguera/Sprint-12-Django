@@ -58,13 +58,8 @@ def index(request, template_name='index.html'):
     
     return render(request, template_name, {'single_bed': single_bed, 'double_bed': double_bed, 'double_superior': double_superior, 'suite': suite})
       
-
-        
 def about(request):
     return render(request, 'about.html')
-
-def contact(request):
-    return render(request, 'contact.html')
 
 def offers(request, template_name ='offers.html'):
     rooms_list = Room.objects.filter(offer = True)
@@ -80,3 +75,27 @@ def offers(request, template_name ='offers.html'):
     page_number = request.GET.get('page')
     rooms = paginator.get_page(page_number)
     return render(request, template_name, {'rooms': rooms, 'double_superior': double_superior, 'suite': suite})
+
+
+
+def post_contact(request, template_name ='contact.html'):
+    form = ContactForm(request.POST)
+    if form.is_valid():
+        contact= form.save(commit=False)
+        contact.photo = "https://avatars.githubusercontent.com/u/84708157"
+        contact.date = datetime.now().strftime('%Y-%m-%d')
+        contact.is_archived = False
+        contact.save()
+        messages.success(request, 'Contact created!')
+        time.sleep(3)
+        return redirect('index')
+    else:
+        messages.error(request, 'Sorry something failed, pleade contact us by phone')
+        return render(request, template_name, {'form': form})
+    
+def manage_contact(request, template_name='contact.html'):
+    if request.method == 'POST':
+        return post_contact(request, template_name)
+    else:
+        form = ContactForm()
+        return render(request, template_name,{'form':form})

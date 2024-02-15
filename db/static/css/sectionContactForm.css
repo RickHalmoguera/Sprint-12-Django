@@ -24,6 +24,14 @@
 .sectionContactForm__input--center {
   align-self: center;
 }
+.sectionContactForm__feedback {
+  height: 300px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  text-align: center;
+}
 .sectionContactForm__textArea {
   background-color: #F8F8F8;
   border: none;

@@ -120,27 +120,27 @@
         <div class="swiper-wrapper swiperOffers__wrapper">
             {% if suite %}
             <div class="swiper-slide swiperOffers__slide">
-                <div class="roomCard">
-                    <div class="roomCard__section">
-                        <img src="{{suite.photo}}" alt="" class="roomCard__img">
+                <div class="popularCard">
+                    <div class="popularCard__section">
+                        <img src="{{suite.photo}}" alt="" class="popularCard__img">
                     </div>
-                    <div class="roomCard__section--text">
-                        <div class="roomCard__section--text">
-                            <div class="roomCard__icons">
-                                <img src="{% static 'icons/bed.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/wifi.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/parking.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/cold.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/gym.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/smoking.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/cocktail.svg' %}" alt="" class="roomCard__icon">
+                    <div class="popularCard__section--text">
+                        <div class="popularCard__section--text">
+                            <div class="popularCard__icons">
+                                <img src="{% static 'icons/bed.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/wifi.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/parking.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/cold.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/gym.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/smoking.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/cocktail.svg' %}" alt="" class="popularCard__icon">
                             </div>
-                            <h3 class="roomCard__h3">{{suite.room_type}}</h3>
-                            <p class="roomCard__p">{{suite.description}}</p>
+                            <h3 class="popularCard__h3">{{suite.room_type}}</h3>
+                            <p class="popularCard__p">{{suite.description}}</p>
                             
-                            <div class="roomCard__section roomCard__section--price">
-                                <p class="roomCard__p--highlight">${{suite.price_night}}<span class="roomCard__span">/Night</span></p>
-                                <p class="roomCard__button"><a class="roomCard__a" href="{% url 'room_details' suite.id %}">Book Now</a></p>
+                            <div class="popularCard__section popularCard__section--price">
+                                <p class="popularCard__p--highlight">${{suite.price_night}}<span class="popularCard__span">/Night</span></p>
+                                <p class="popularCard__button"><a class="popularCard__a" href="{% url 'room_details' suite.id %}">Book Now</a></p>
                             </div>
                         </div>
                     </div>
@@ -149,27 +149,27 @@
             {% endif %}
             {% if double_superior %}
             <div class="swiper-slide swiperOffers__slide">
-                <div class="roomCard">
-                    <div class="roomCard__section">
-                        <img src="{{double_superior.photo}}" alt="" class="roomCard__img">
+                <div class="popularCard">
+                    <div class="popularCard__section">
+                        <img src="{{double_superior.photo}}" alt="" class="popularCard__img">
                     </div>
-                    <div class="roomCard__section--text">
-                        <div class="roomCard__section--text">
-                            <div class="roomCard__icons">
-                                <img src="{% static 'icons/bed.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/wifi.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/parking.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/cold.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/gym.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/smoking.svg' %}" alt="" class="roomCard__icon">
-                                <img src="{% static 'icons/cocktail.svg' %}" alt="" class="roomCard__icon">
+                    <div class="popularCard__section--text">
+                        <div class="popularCard__section--text">
+                            <div class="popularCard__icons">
+                                <img src="{% static 'icons/bed.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/wifi.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/parking.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/cold.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/gym.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/smoking.svg' %}" alt="" class="popularCard__icon">
+                                <img src="{% static 'icons/cocktail.svg' %}" alt="" class="popularCard__icon">
                             </div>
-                            <h3 class="roomCard__h3">{{double_superior.room_type}}</h3>
-                            <p class="roomCard__p">{{double_superior.description}}</p>
+                            <h3 class="popularCard__h3">{{double_superior.room_type}}</h3>
+                            <p class="popularCard__p">{{double_superior.description}}</p>
                             
-                            <div class="roomCard__section roomCard__section--price">
-                                <p class="roomCard__p--highlight">${{double_superior.price_night}}<span class="roomCard__span">/Night</span></p>
-                                <p class="roomCard__button"><a class="roomCard__a" href="{% url 'room_details' double_superior.id %}">Book Now</a></p>
+                            <div class="popularCard__section popularCard__section--price">
+                                <p class="popularCard__p--highlight">${{double_superior.price_night}}<span class="popularCard__span">/Night</span></p>
+                                <p class="popularCard__button"><a class="popularCard__a" href="{% url 'room_details' double_superior.id %}">Book Now</a></p>
                             </div>
                         </div>
                     </div>

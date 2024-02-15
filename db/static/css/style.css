@@ -561,8 +561,14 @@
   padding: 8em 1em 3em 1em;
   display: flex;
   flex-direction: column;
+  gap: 3em;
+  height: 950px;
+}
+.sectionVideo__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   gap: 2em;
-  height: 85rem;
 }
 .sectionVideo__h2 {
   color: #BEAD8E;
@@ -610,10 +616,14 @@
     background: linear-gradient(to right, #222 0%, #222 70%, #BEAD8E 70%, #BEAD8E 100%);
     height: auto;
   }
+  .sectionVideo__video {
+    width: 500px;
+  }
   .sectionVideo__container {
     display: grid;
     grid-template-areas: "area1 area4" "area2 area4" "area3 area4" "area5 area4";
     align-items: center;
+    gap: 2em;
     margin: 0 auto;
     max-width: 1420px;
   }
@@ -1043,6 +1053,102 @@
 
 .message.error {
   background-color: red;
+}
+
+.popularCard {
+  width: 100%;
+  background-color: #FFF;
+}
+.popularCard__section {
+  height: 100%;
+}
+.popularCard__section--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.popularCard__img {
+  object-fit: cover;
+  width: 100%;
+  height: 280px;
+}
+.popularCard__icons {
+  z-index: 3;
+  width: 60%;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+.popularCard__h3 {
+  color: #111;
+  font-family: "Old Standard TT", serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.6rem;
+  letter-spacing: -1.2px;
+}
+.popularCard__a {
+  text-decoration: none;
+  color: #777;
+}
+.popularCard__a:visited {
+  color: #777;
+}
+.popularCard__p {
+  color: #777;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.popularCard__p--highlight {
+  color: #BEAD8E;
+  font-family: "Archivo", sans-serif;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.3rem;
+}
+.popularCard__span {
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.3rem;
+}
+.popularCard__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 1em;
+}
+.popularCard__section--text {
+  margin-top: -3rem;
+}
+.popularCard__section--price {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+.popularCard__button {
+  width: 10rem;
+  color: #C2C2C2;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: 0.5s;
+}
+.popularCard__button:hover {
+  cursor: pointer;
+  color: #BEAD8E;
+  font-size: 2rem;
 }
 
 .swiperColumn {
@@ -1548,20 +1654,23 @@
   width: 100%;
   background-color: #FFF;
 }
-.roomCard__section {
+.roomCard__section--popular {
   height: 100%;
 }
-.roomCard__section--text {
+.roomCard__section--popular--text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1em;
 }
+.roomCard__section {
+  height: 260px;
+}
 .roomCard__img {
   object-fit: cover;
   width: 100%;
-  height: 280px;
+  height: 100%;
 }
 .roomCard__icons {
   z-index: 3;
@@ -1614,7 +1723,6 @@
   flex-direction: column;
   align-items: center;
   gap: 2em;
-  padding: 1em;
 }
 .roomCard__section--text {
   margin-top: -3rem;
@@ -2141,6 +2249,24 @@
   line-height: normal;
   letter-spacing: -6px;
 }
+.sectionContactInfo__p--small {
+  color: #999;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+.sectionContactInfo__h4 {
+  color: #111;
+  font-family: "Archivo", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+}
 .sectionContactInfo__text {
   display: flex;
   flex-direction: column;
@@ -2197,6 +2323,14 @@
 }
 .sectionContactForm__input--center {
   align-self: center;
+}
+.sectionContactForm__feedback {
+  height: 300px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  text-align: center;
 }
 .sectionContactForm__textArea {
   background-color: #F8F8F8;

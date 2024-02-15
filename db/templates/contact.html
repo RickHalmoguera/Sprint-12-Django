@@ -15,7 +15,7 @@
 <section class="sectionContactInfo">
     <div class="sectionContactInfo__card">
         <p class="sectionContactInfo__p">01</p>
-        <img src="./icons//mail.svg" alt="" class="sectionContactInfo__img">
+        <img src="{% static 'icons/mail.svg' %}" alt="" class="sectionContactInfo__img">
         <div class="sectionContactInfo__text">
             <span class="sectionContactInfo__span sectionContactInfo__span--dark">Hotel Address</span>
             <span class="sectionContactInfo__span sectionContactInfo__span--light">C. de la Princesa, 31, 2º, 28008 Madrid</span>
@@ -23,7 +23,7 @@
     </div>
     <div class="sectionContactInfo__card">
         <p class="sectionContactInfo__p">02</p>
-        <img src="./icons//phone.svg" alt="" class="sectionContactInfo__img">
+        <img src="{% static 'icons/phone.svg' %}" alt="" class="sectionContactInfo__img">
         <div class="sectionContactInfo__text">
             <span class="sectionContactInfo__span sectionContactInfo__span--dark">Phone Number</span>
             <span class="sectionContactInfo__span sectionContactInfo__span--light">+34 650 25 82 66</span>
@@ -31,7 +31,7 @@
     </div>
     <div class="sectionContactInfo__card">
         <p class="sectionContactInfo__p">03</p>
-        <img src="./icons//location.svg" alt="" class="sectionContactInfo__img">
+        <img src="{% static 'icons/location.svg' %}" alt="" class="sectionContactInfo__img">
         <div class="sectionContactInfo__text">
             <span class="sectionContactInfo__span sectionContactInfo__span--dark">Email</span>
             <span class="sectionContactInfo__span sectionContactInfo__span--light">halmoguerar@gmail.com</span>
@@ -39,39 +39,45 @@
     </div>
 </section>
 
+<div class="sectionContactForm__feedback" id="feedbackContainer">
+    <h4 class="sectionContactInfo__h4">¡Thank you for your request!</h4>
+    <p class="sectionContactInfo__p--small">We have received it correctly. Someone from our Team will get back to you very soon.</p>    
+    <p class="sectionContactInfo__p--small">The Miranda Hotel</p>
+</div>
 
-<form action="" class="sectionContactForm">
+<form class="sectionContactForm" method="POST" id="roomForm">
+    {% csrf_token %}
     <div class="sectionContactForm__topGroup">
         <div class="sectionContactForm__group">
             <div class="sectionContactForm__container">
-                <img src="./icons/userSmall.svg" alt="" class="sectionContactForm__img">
-                <input  class="sectionContactForm__input" type="text" placeholder="Your full name">
+                <img src="{% static 'icons/userSmall.svg' %}" alt="" class="sectionContactForm__img">
+                {{ form.full_name }}
             </div>
             <div class="sectionContactForm__container">
-                <img src="./icons/phoneSmall.svg" alt="" class="sectionContactForm__img">
-                <input  class="sectionContactForm__input" type="text" placeholder="Add phone number">
+                <img src="{% static 'icons/phoneSmall.svg' %}" alt="" class="sectionContactForm__img">
+                {{ form.phone }}
             </div>
 
         </div>
 
         <div class="sectionContactForm__group">
             <div class="sectionContactForm__container">
-                <img src="./icons/mailSmall.svg" alt="" class="sectionContactForm__img">
-                <input  class="sectionContactForm__input" type="email" placeholder="Enter email address">
+                <img src="{% static 'icons/mailSmall.svg' %}" alt="" class="sectionContactForm__img">
+                {{ form.email }}
             </div>
             <div class="sectionContactForm__container">
-                <img src="./icons/copySmall.svg" alt="" class="sectionContactForm__img">
-                <input  class="sectionContactForm__input" type="text" placeholder="Enter subject">
+                <img src="{% static 'icons/copySmall.svg' %}" alt="" class="sectionContactForm__img">
+                {{ form.subject }}
             </div>
 
         </div>
     
     </div>
     <div class="sectionContactForm__container">
-        <img src="./icons/penSmall.svg" alt="" class="sectionContactForm__img--top">
-        <textarea class="sectionContactForm__textArea" rows="10" placeholder="Enter message"></textarea>
+        <img src="{% static 'icons/penSmall.svg' %}" alt="" class="sectionContactForm__img--top">
+        {{ form.text }}
     </div>
-    <input type="submit" value="send" class="button button--dark sectionContactForm__input--center ">
+    <button class="button button--dark" type="submit">send</button> 
 </form>
 
 {% endblock %}

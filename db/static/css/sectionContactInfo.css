@@ -21,6 +21,24 @@
   line-height: normal;
   letter-spacing: -6px;
 }
+.sectionContactInfo__p--small {
+  color: #999;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+.sectionContactInfo__h4 {
+  color: #111;
+  font-family: "Archivo", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+}
 .sectionContactInfo__text {
   display: flex;
   flex-direction: column;

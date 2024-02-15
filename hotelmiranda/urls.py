@@ -26,7 +26,7 @@ urlpatterns = [
     path('rooms', rooms, name='available_rooms'),
     path('details/<int:id>/', manage_room_details, name='room_details'),
     path('offers', offers, name='offers'),
-    path('contact', contact, name='contact')
+    path('contact', manage_contact, name='contact')
     
 ]
 

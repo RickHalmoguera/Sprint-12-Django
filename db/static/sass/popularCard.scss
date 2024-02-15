@@ -1,11 +1,12 @@
 @import "./variables.scss";
 
-.roomCard{
+.popularCard{
     width: 100%;
     background-color: $bg__color--light;
     
-   &__section--popular{
-    height: 100%;
+   
+    &__section{
+        height: 100%;
 
         &--text{
             display: flex;
@@ -15,17 +16,12 @@
             gap: 1em;
             
         }
-   }
-
-    &__section{
-        height: 260px;
-    
-    
     }
+
     &__img{
         object-fit: cover;
         width: 100%;
-        height: 100%;
+        height: 280px;
     }
 
     &__icons{
@@ -34,7 +30,6 @@
         background-color: $bg__color--light;
         display: flex;
         justify-content: space-between;
-        
         padding: 2em;
     }
 
@@ -89,6 +84,7 @@
         flex-direction: column;
         align-items: center;
         gap: 2em;
+        padding: 1em;
 
         &--text{
             margin-top: -3rem;

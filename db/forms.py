@@ -1,5 +1,5 @@
 from django import forms
-from db.models import Booking
+from db.models import Booking, Contact
 
 class BookingForm(forms.ModelForm):
     class Meta:
@@ -17,3 +17,15 @@ class BookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['message'].required = False
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ['full_name','email', 'phone', 'subject','text']
+        widgets = {
+            'full_name': forms.TextInput(attrs={'class': 'sectionContactForm__input', 'placeholder': 'Full Name'}),
+            'phone': forms.TextInput(attrs={'class': 'sectionContactForm__input', 'placeholder': 'Phone'}),
+            'email': forms.EmailInput(attrs={'class': 'sectionContactForm__input', 'placeholder': 'Email'}),
+            'subject': forms.TextInput(attrs={'class': 'sectionContactForm__input', 'placeholder': 'Subject'}),
+            'text': forms.Textarea(attrs={'class': 'sectionContactForm__textArea', 'cols': 30, 'rows': 10, 'placeholder': 'Message'})
+        }

@@ -25,6 +25,28 @@
         letter-spacing: -6px;
     }
 
+    &__p--small{
+        
+        color: $font__color--text-mediumDark;
+        font-family: $font__family--extra;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+
+    }
+
+    &__h4{
+        color: $font__color--text-darkest;
+        font-family: $font__family--main;
+        text-align: center;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.54px;
+    }
+
     &__text{
         display: flex;
         flex-direction: column;
