@@ -20,11 +20,13 @@ from db.views import *
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     path('index', index, name='index'),
     path('about', about, name='about'),
     path('rooms', rooms, name='available_rooms'),
     path('details/<int:id>/', manage_room_details, name='room_details'),
+    path('offers', offers, name='offers'),
+    path('contact', contact, name='contact')
     
 ]
 

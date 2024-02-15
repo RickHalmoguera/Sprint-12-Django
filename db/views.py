@@ -4,6 +4,7 @@ from db.models import *
 from db.forms import *
 from django.contrib import messages 
 from datetime import datetime
+import time
 
 def post_booking (request, id, template_name):
     form = BookingForm(request.POST)
@@ -13,11 +14,10 @@ def post_booking (request, id, template_name):
         booking.room = get_object_or_404(Room, id=id)
         booking.status = 'booked'
         booking.save()
-        print("ajaaa")
         messages.success(request, 'Booking created!')
+        time.sleep(3)
         return redirect('index')
     else:
-        print(form.errors)
         messages.error(request, 'Sorry something failed, pleade contact us by phone')
         return render(request, template_name, {'form': form})
 
@@ -63,3 +63,9 @@ def index(request, template_name='index.html'):
         
 def about(request):
     return render(request, 'about.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def offers(request):
+    return render(request, 'offers.html')

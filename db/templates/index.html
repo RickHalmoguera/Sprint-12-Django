@@ -1,488 +1,365 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Hotel Miranda</title>
-</head>
-<body>
-    <header class="header">
-        <div class="header__topContainer topContainer">
-            <p class="topContainer__p">We Make Your Feel Comfortable</p>
-        
-            <nav class="nav">
-                <img src="{% static 'icons/Menu.svg' %}" alt="Menu" class="nav__icon" id="menuBtn">
-                <div class="nav__logo logo">
-                    <div class="logo__square logo__square--light">
-                        <span class="logo__span">h</span>
-                    </div>
-                    <div class="logo__text">
-                        <p class="logo__p--bold">hotel</p>
-                        <p class="logo__p--regular">miranda</p>
-                    </div>
+{% block content %} 
+
+<section class="sectionHero">
+    <div class="sectionHero__container">
+        <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
+        <h1 class="sectionHero__h1">The Perfect<br> Base For You</h1>
+        <div class="sectionHero__btnContainer">
+            <button class="button button--dark"><a href="{% url 'about' %}" class="button__a">take a tour</a></button>
+            <button class="button button--light"><a href="./.html" class="button__a">learn more</a></button>
+        </div>
+    </div>
+</section>
+<section class="sectionCalendar">
+    
+    <form class="sectionCalendar__form" method="GET" action="{% url 'available_rooms'%}">
+        <div class="sectionCalendar__inputContainer">
+            <label for="arrivalDate" class="sectionCalendar__label">Arrival Date</label>
+            <input type="date" id="arrivalDate" name="arrival_date" class="sectionCalendar__input" required>
+        </div>
+        <div class="sectionCalendar__inputContainer">
+            <label for="departureDate" class="sectionCalendar__label">Departure Date</label>
+            <input type="date"  id="departureDate"  name="departure_date" class="sectionCalendar__input" required>
+        </div>
+        <div class="sectionCalendar__btnContainer">
+            <button class="button button--dark" type="submit">check avaliability</button>
+        </div>
+
+    </form>
+
+</section>
+
+<section class="sectionAbout">
+    <div class="sectionAbout__flex">
+        <h2 class="sectionAbout__h2">about us</h2>
+        <h1 class="sectionAbout__h1">Discovey Our Underground</h1>
+        <p class="sectionAbout__p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do<br> eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut<br> enim ad minim veniam, quis nostrud exercitation ullamco laboris<br> nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <button class="button button--dark">book now</button>
+    </div>
+    
+    <div class="sectionAbout__grid">
+        <div class="sectionAbout__container sectionAbout__container--img sectionAbout__container--area1">
+            <img src="{% static 'images/about1.jpg' %}" alt="" class="sectionAbout__img">
+        </div>
+        <div class="sectionAbout__container sectionAbout__container--text sectionAbout__container--area2">
+            <img src="{% static 'icons/teamIcon.svg' %}" alt="" class="sectionAbout__icon">
+            <img src="{% static 'icons/teamIconShadow.svg' %}" alt="" class="sectionAbout__shadow">
+            <h3 class="sectionAbout__h3">Strong Team</h3>
+            <p class="sectionAbout__p">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit, sed<br> do eiusmod tempor.</p>
+        </div>
+        <div class="sectionAbout__container sectionAbout__container--img sectionAbout__container--area3">
+            <img src="{% static 'images/about2.jpg' %}" alt="" class="sectionAbout__img">
+        </div>
+        <div class="sectionAbout__container sectionAbout__container--text sectionAbout__container--dark sectionAbout__container--area4">
+            <img src="{% static 'icons/calendarIcon.svg' %}" alt="" class="sectionAbout__icon">
+            <h3 class="sectionAbout__h3 sectionAbout__h3--light">Luxury Room</h3>
+            <p class="sectionAbout__p sectionAbout__p--light">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit, sed<br> do eiusmod tempor.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="sectionRoom">
+    <h2 class="sectionRoom__h2">rooms</h2>
+    <h1 class="sectionRoom__h1">Hand Picked Rooms</h1>
+    
+    <div class="swiper swiperIndex">
+        <div class="swiper-wrapper swiperIndex__wrapper">
+            {% if single_bed %}
+            <div class="swiper-slide swiperIndex__swiperSlide">
+                <div class="swiperIndex__slideTop">
+                    <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
                 </div>
-                <ul class=" header__ul header__ul--desktop">
-                    <li class="header__li"><a href="./about.html" class="header__a">About Us</a></li>
-                    <li class="header__li"><a href="./rooms.html" class="header__a">Rooms</a></li>
-                    <li class="header__li"><a href="./offers.html" class="header__a">Offers</a></li>
-                    <li class="header__li"><a href="./contact.html" class="header__a">Contact</a></li>
-                </ul>
-                <div class="nav__iconContainer">
-                    <img src="{% static 'icons/user.svg' %}" alt="user" class="nav__icon">
-                    <img src="{% static 'icons/search.svg' %}" alt="search" class="nav__icon">
+                <img src="{{single_bed.photo}}" alt="" class="swiperIndex__img">
+                <div class="swiperIndex__swiperBottom swiperBotton">
+                    <h3 class="swiperBotton__h3">{{single_bed.room_type}}</h3>
+                    <p class="swiperBotton__p">{{single_bed.description}}</p>
+                    <p class="swiperBotton__p--highlight">${{single_bed.price_night}}<span class="swiperBotton__span">/Night</span></p>
                 </div>
-            </nav>
+            </div>
+            {% endif %}
+            {% if double_bed %}
+            <div class="swiper-slide swiperIndex__swiperSlide">
+                <div class="swiperIndex__slideTop">
+                    <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
+                </div>
+                <img src="{{double_bed.photo}}" alt="" class="swiperIndex__img">
+                <div class="swiperIndex__swiperBottom swiperBotton">
+                    <h3 class="swiperBotton__h3">{{double_bed.room_type}}</h3>
+                    <p class="swiperBotton__p">{{double_bed.description}}</p>
+                    <p class="swiperBotton__p--highlight">${{double_bed.price_night}}<span class="swiperBotton__span">/Night</span></p>
+                </div>
+            </div>
+            {% endif %}
+            {% if double_superior %}
+            <div class="swiper-slide swiperIndex__swiperSlide">
+                <div class="swiperIndex__slideTop">
+                    <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
+                </div>
+                <img src="{{ double_superior.photo }}" alt="" class="swiperIndex__img">
+                <div class="swiperIndex__swiperBottom swiperBotton">
+                    <h3 class="swiperBotton__h3">{{double_superior.room_type}}</h3>
+                    <p class="swiperBotton__p">{{double_superior.description}}</p>
+                    <p class="swiperBotton__p--highlight">${{double_superior.price_night}}<span class="swiperBotton__span">/Night</span></p>
+                </div>
+            </div>
+            {% endif %}
+            {% if suite %}
+            <div class="swiper-slide swiperIndex__swiperSlide">
+                <div class="swiperIndex__slideTop">
+                    <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
+                    <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
+                </div>
+                <img src="{{suite.photo}}" alt="" class="swiperIndex__img">
+                <div class="swiperIndex__swiperBottom swiperBotton">
+                    <h3 class="swiperBotton__h3">{{suite.room_type}}</h3>
+                    <p class="swiperBotton__p">{{suite.description}}</p>
+                    <p class="swiperBotton__p--highlight">${{suite.price_night}}<span class="swiperBotton__span">/Night</span></p>
+                </div>
+            </div>
+            {% endif %}
         </div>
-        <div class="header__dropMenu" id="dropMenu">
-            <ul class="header__ul">
-                <li class="header__li"><a href="./about.html" class="header__a">About Us</a></li>
-                <li class="header__li"><a href="./rooms.html" class="header__a">Rooms</a></li>
-                <li class="header__li"><a href="./offers.html" class="header__a">Offers</a></li>
-                <li class="header__li"><a href="./contact.html" class="header__a">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-    <section class="sectionHero">
-        <div class="sectionHero__container">
-            <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
-            <h1 class="sectionHero__h1">The Perfect<br> Base For You</h1>
-            <div class="sectionHero__btnContainer">
-                <button class="button button--dark"><a href="./about.html" class="button__a">take a tour</a></button>
-                <button class="button button--light"><a href="./.html" class="button__a">learn more</a></button>
-            </div>
+    </div>
 
-        </div>
-    </section>
-    <section class="sectionCalendar">
-        <form class="sectionCalendar__form" method="GET" action="{% url 'available_rooms'%}">
-            <div class="sectionCalendar__inputContainer">
-                <label for="arrivalDate" class="sectionCalendar__label">Arrival Date</label>
-                <input type="date" id="arrivalDate" name="arrival_date" class="sectionCalendar__input" required>
-            </div>
-            <div class="sectionCalendar__inputContainer">
-                <label for="departureDate" class="sectionCalendar__label">Departure Date</label>
-                <input type="date"  id="departureDate"  name="departure_date" class="sectionCalendar__input" required>
-            </div>
-            <div class="sectionCalendar__btnContainer">
-                <button class="button button--dark" type="submit">check avaliability</button>
-            </div>
+    
+</section>
 
-        </form>
 
-    </section>
+<section class="sectionVideo">
+    <div class="sectionVideo__container">
+        <h2 class="sectionVideo__h2">intro video</h2>
+        <h1 class="sectionVideo__h1">Meet With Our<br/> Luxury Place.</h1>
+        <p class="sectionVideo__p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat you have 
+            to understand this.
+        </p>
 
-    <section class="sectionAbout">
-        <div class="sectionAbout__flex">
-            <h2 class="sectionAbout__h2">about us</h2>
-            <h1 class="sectionAbout__h1">Discovey Our Underground</h1>
-            <p class="sectionAbout__p">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do<br> eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut<br> enim ad minim veniam, quis nostrud exercitation ullamco laboris<br> nisi ut aliquip ex ea commodo consequat.
+        <iframe
+            class="sectionVideo__video"
+            src="https://www.youtube.com/embed/Bu3Doe45lcU?si=wdNK-3QMmlm3VshQ&amp;clip=Ugkx9RNabzWcvOxCnmLbJgKH6Nj5D4cGHx74&amp;clipt=EKjDARj4yQQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+        <button class="button button--dark sectionVideo__button">book now</button>
+
+    </div>
+</section>
+
+<section class="sectionFacilities">
+    <h2 class="sectionFacilities__h2">facilities</h2>
+    <h1 class="sectionFacilities__h1">Core Features</h1>
+    <div class="swiper swiperPagination">
+        <div class="swiper-wrapper swiperPagination__wrapper">
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span">01</span>
+            <img src="{% static 'icons/core 1.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3">Have High Rating</h3>
+            <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
             </p>
-            <button class="button button--dark">book now</button>
-        </div>
-        
-        <div class="sectionAbout__grid">
-            <div class="sectionAbout__container sectionAbout__container--img sectionAbout__container--area1">
-                <img src="{% static 'images/about1.jpg' %}" alt="" class="sectionAbout__img">
             </div>
-            <div class="sectionAbout__container sectionAbout__container--text sectionAbout__container--area2">
-                <img src="{% static 'icons/teamIcon.svg' %}" alt="" class="sectionAbout__icon">
-                <img src="{% static 'icons/teamIconShadow.svg' %}" alt="" class="sectionAbout__shadow">
-                <h3 class="sectionAbout__h3">Strong Team</h3>
-                <p class="sectionAbout__p">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit, sed<br> do eiusmod tempor.</p>
-            </div>
-            <div class="sectionAbout__container sectionAbout__container--img sectionAbout__container--area3">
-                <img src="{% static 'images/about2.jpg' %}" alt="" class="sectionAbout__img">
-            </div>
-            <div class="sectionAbout__container sectionAbout__container--text sectionAbout__container--dark sectionAbout__container--area4">
-                <img src="{% static 'icons/calendarIcon.svg' %}" alt="" class="sectionAbout__icon">
-                <h3 class="sectionAbout__h3 sectionAbout__h3--light">Luxury Room</h3>
-                <p class="sectionAbout__p sectionAbout__p--light">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit, sed<br> do eiusmod tempor.</p>
-            </div>
-        </div>
-    </section>
-
-    
-    <section class="sectionRoom">
-        <h2 class="sectionRoom__h2">rooms</h2>
-        <h1 class="sectionRoom__h1">Hand Picked Rooms</h1>
-       
-        <div class="swiper swiperIndex">
-            <div class="swiper-wrapper swiperIndex__wrapper">
-                {% if single_bed %}
-                <div class="swiper-slide swiperIndex__swiperSlide">
-                    <div class="swiperIndex__slideTop">
-                        <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
-                   </div>
-                    <img src="{{single_bed.photo}}" alt="" class="swiperIndex__img">
-                    <div class="swiperIndex__swiperBottom swiperBotton">
-                        <h3 class="swiperBotton__h3">{{single_bed.room_type}}</h3>
-                        <p class="swiperBotton__p">{{single_bed.description}}</p>
-                        <p class="swiperBotton__p--highlight">${{single_bed.price_night}}<span class="swiperBotton__span">/Night</span></p>
-                    </div>
-                </div>
-                {% endif %}
-                {% if double_bed %}
-                <div class="swiper-slide swiperIndex__swiperSlide">
-                    <div class="swiperIndex__slideTop">
-                        <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
-                   </div>
-                    <img src="{{double_bed.photo}}" alt="" class="swiperIndex__img">
-                    <div class="swiperIndex__swiperBottom swiperBotton">
-                        <h3 class="swiperBotton__h3">{{double_bed.room_type}}</h3>
-                        <p class="swiperBotton__p">{{double_bed.description}}</p>
-                        <p class="swiperBotton__p--highlight">${{double_bed.price_night}}<span class="swiperBotton__span">/Night</span></p>
-                    </div>
-                </div>
-                {% endif %}
-                {% if double_superior %}
-                <div class="swiper-slide swiperIndex__swiperSlide">
-                    <div class="swiperIndex__slideTop">
-                        <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
-                   </div>
-                    <img src="{{ double_superior.photo }}" alt="" class="swiperIndex__img">
-                    <div class="swiperIndex__swiperBottom swiperBotton">
-                        <h3 class="swiperBotton__h3">{{double_superior.room_type}}</h3>
-                        <p class="swiperBotton__p">{{double_superior.description}}</p>
-                        <p class="swiperBotton__p--highlight">${{double_superior.price_night}}<span class="swiperBotton__span">/Night</span></p>
-                    </div>
-                </div>
-                {% endif %}
-                {% if suite %}
-                <div class="swiper-slide swiperIndex__swiperSlide">
-                    <div class="swiperIndex__slideTop">
-                        <img src="{% static 'icons/bed.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/wifi.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/parking.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/cold.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/gym.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/smoking.svg' %}" alt="" class="swiper__icon">
-                        <img src="{% static 'icons/cocktail.svg' %}" alt="" class="swiper__icon">
-                   </div>
-                    <img src="{{suite.photo}}" alt="" class="swiperIndex__img">
-                    <div class="swiperIndex__swiperBottom swiperBotton">
-                        <h3 class="swiperBotton__h3">{{suite.room_type}}</h3>
-                        <p class="swiperBotton__p">{{suite.description}}</p>
-                        <p class="swiperBotton__p--highlight">${{suite.price_night}}<span class="swiperBotton__span">/Night</span></p>
-                    </div>
-                </div>
-                {% endif %}
-            </div>
-        </div>
-
-        
-    </section>
-   
-    
-    <section class="sectionVideo">
-        <div class="sectionVideo__container">
-            <h2 class="sectionVideo__h2">intro video</h2>
-            <h1 class="sectionVideo__h1">Meet With Our<br/> Luxury Place.</h1>
-            <p class="sectionVideo__p">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat you have 
-                to understand this.
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span">02</span>
+            <img src="{% static 'icons/core 2.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3">Quiet Hours</h3>
+            <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
             </p>
-    
-            <iframe
-                class="sectionVideo__video"
-                src="https://www.youtube.com/embed/Bu3Doe45lcU?si=wdNK-3QMmlm3VshQ&amp;clip=Ugkx9RNabzWcvOxCnmLbJgKH6Nj5D4cGHx74&amp;clipt=EKjDARj4yQQ" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
-            <button class="button button--dark sectionVideo__button">book now</button>
-
-        </div>
-    </section>
-
-    <section class="sectionFacilities">
-        <h2 class="sectionFacilities__h2">facilities</h2>
-        <h1 class="sectionFacilities__h1">Core Features</h1>
-        <div class="swiper swiperPagination">
-            <div class="swiper-wrapper swiperPagination__wrapper">
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span">01</span>
-                <img src="{% static 'icons/core 1.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3">Have High Rating</h3>
-                <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p>
-              </div>
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span">02</span>
-                <img src="{% static 'icons/core 2.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3">Quiet Hours</h3>
-                <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p>
-              </div>
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span">03</span>
-                <img src="{% static 'icons/core 3.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3">Best Locations</h3>
-                <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p>
-              </div>
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span">04</span>
-                <img src="{% static 'icons/core 4.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3">Free Cancellations</h3>
-                <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p>
-              </div>
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span">05</span>
-                <img src="{% static 'icons/core 5.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3">Payment Options</h3>
-                <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p>
-              </div>
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span">06</span>
-                <img src="{% static 'icons/core  6.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3">Special Offers</h3>
-                <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p> 
-              </div>
-              
             </div>
-            <div class="swiperPagination__bullets"></div>
-          </div>
-    </section>
-
-    <section class="sectionMenu">
-        <img src="{% static 'icons/donut.svg' %}" alt="" class="sectionMenu__img">
-         <h2 class="sectionMenu__h2">menu</h2>
-         <h1 class="sectionMenu__h1">Our Food Menu</h1>
-         <div class="swiper swiperColumn">
-            <div class="swiper-wrapper swiperColumn__wrapper">
-                <div class="swiper-slide swiperColumn__slide">
-                    <img src="{% static 'images/eggBacon.jpg' %}" alt="" class="swiperColumn__img">
-                    <div class="swiperColumn__text">
-                        <h3 class="swiperColumn__h3">Eggs & Bacon</h3>
-                        <p class="swiperColumn__p">
-                            Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
-                            sed do eiusmod tempor.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide swiperColumn__slide">
-                    <img src="{% static 'images/coffe.jpg' %}" alt="" class="swiperColumn__img">
-                    <div class="swiperColumn__text">
-                        <h3 class="swiperColumn__h3">Tea or Coffe</h3>
-                        <p class="swiperColumn__p">
-                            Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
-                            sed do eiusmod tempor.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide swiperColumn__slide">
-                    <img src="{% static 'images/oatmeal.jpg' %}" alt="" class="swiperColumn__img">
-                    <div class="swiperColumn__text">
-                        <h3 class="swiperColumn__h3">Chia Oatmeal</h3>
-                        <p class="swiperColumn__p">
-                            Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
-                            sed do eiusmod tempor.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide swiperColumn__slide">
-                    <img src="{% static 'images/fruit.jpg' %}" alt="" class="swiperColumn__img">
-                    <div class="swiperColumn__text">
-                        <h3 class="swiperColumn__h3">Fruit Parfait</h3>
-                        <p class="swiperColumn__p">
-                            Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
-                            sed do eiusmod tempor.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide swiperColumn__slide">
-                    <img src="{% static 'images/marmalade.jpg' %}" alt="" class="swiperColumn__img">
-                    <div class="swiperColumn__text">
-                        <h3 class="swiperColumn__h3">Marmalade Selection</h3>
-                        <p class="swiperColumn__p">
-                            Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
-                            sed do eiusmod tempor.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide swiperColumn__slide">
-                    <img src="{% static 'images/cheese.jpg' %}" alt="" class="swiperColumn__img">
-                    <div class="swiperColumn__text">
-                        <h3 class="swiperColumn__h3">Cheese Plate</h3>
-                        <p class="swiperColumn__p">
-                            Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
-                            sed do eiusmod tempor.
-                        </p>
-                    </div>
-                </div>
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span">03</span>
+            <img src="{% static 'icons/core 3.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3">Best Locations</h3>
+            <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
+            </p>
             </div>
-        </div>
-        <div class="sectionMenu__controls">
-            <div class="swiperColumn__button swiperColumn__button--prev"><</div>
-            <div class="swiperColumn__button swiperColumn__button--next">></div>
-        </div>
-        
-        <div class="swiper swiperFlex">
-            <div class="swiper-wrapper swiperFlex__wrapper">
-              <div class="swiper-slide swiperFlex__slide">
-                <img src="{% static 'images/eggBacon.jpg' %}" alt="" class="swiperFlex__img">
-              </div>
-              <div class="swiper-slide swiperFlex__slide">
-                <img src="{% static 'images/fruit.jpg' %}" alt="" class="swiperFlex__img">
-              </div>
-              <div class="swiper-slide swiperFlex__slide">
-                <img src="{% static 'images//salad.jpg' %}" alt="" class="swiperFlex__img">
-                </p>
-              </div>    
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span">04</span>
+            <img src="{% static 'icons/core 4.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3">Free Cancellations</h3>
+            <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
+            </p>
             </div>
-            <div class="swiperFlex__bullets"></div>
-        </div>
-    </section>
-
-    <section class="sectionDetails">
-        <div class="sectionDetails__container">
-
-            <div class="sectionDetails__card">
-                <img src="{% static 'icons/rocket--dark.svg' %}" alt="" class="sectionDetails__img">
-                <div class="sectionDetails__text">
-                    <span class="sectionDetails__span">84k<span class="sectionDetails__span--small">+</span></span>
-                    <p class="sectionDetails__p">Projects are Completed</p>
-                </div> 
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span">05</span>
+            <img src="{% static 'icons/core 5.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3">Payment Options</h3>
+            <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
+            </p>
             </div>
-            <div class="sectionDetails__card">
-                <img src="{% static 'icons/team--dark.svg' %}" alt="" class="sectionDetails__img">
-                <div class="sectionDetails__text">
-                    <span class="sectionDetails__span">10Mk<span class="sectionDetails__span--small">+</span></span>
-                    <p class="sectionDetails__p">Active Backers Around World</p>
-                </div> 
-            </div>
-            <div class="sectionDetails__card">
-                <img src="{% static 'icons/chart--dark.svg' %}" alt="" class="sectionDetails__img">
-                <div class="sectionDetails__text">
-                    <span class="sectionDetails__span">02K<span class="sectionDetails__span--small">+</span></span>
-                    <p class="sectionDetails__p">Categories Served</p>
-                </div> 
-            </div>
-            <div class="sectionDetails__card">
-                <img src="{% static 'icons/book--dark.svg' %}" alt="" class="sectionDetails__img">
-                <div class="sectionDetails__text">
-                    <span class="sectionDetails__span">100M<span class="sectionDetails__span--small">+</span></span>
-                    <p class="sectionDetails__p">Idea Raised Funds</p>
-                </div> 
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="footer__inner">
-                
-            <div class="footer__section">
-                <div class="logo">
-                    <div class="logo__square logo__square--highlight">
-                         <span class="logo__span logo__span--light">h</span>
-                    </div>
-                    <div class="logo__text">
-                        <p class="logo__p--bold">hotel</p>
-                        <p class="logo__p--regular">miranda</p>
-                    </div>
-                </div>
-        
-                <p class="footer__p">
-                    Lorem ipsum dolor sit amet, consect etur adipisicing elit, 
-                    sed doing eius mod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco 
-                    laboris nisi.
-                </p>
-                <div class="footer__socials">
-                    <i class="fa-brands fa-square-facebook footer__icon"></i>
-                    <i class="fa-brands fa-square-twitter footer__icon"></i>
-                    <i class="fa-brands fa-square-behance footer__icon"></i>
-                    <i class="fa-brands fa-linkedin footer__icon"></i>
-                    <i class="fa-brands fa-square-youtube footer__icon"></i>
-                </div>
-            </div>
-    
-            <div class="footer__section">
-                <h3 class="footer__h3">Services.</h3>
-                <ul class="footer__ul">
-                    <li class="footer__li">+ Restaurant & Bar</li>
-                    <li class="footer__li">+ Swimming Pool</li>
-                    <li class="footer__li">+ Wellness & Spa</li>
-                    <li class="footer__li">+ Restaurant</li>
-                    <li class="footer__li">+ Conference Room</li>
-                    <li class="footer__li">+ Coctail Party House</li>
-                    <li class="footer__li">+ Gaming Zone</li>
-                    <li class="footer__li">+ Marriage Party</li>
-                    <li class="footer__li">+ Party Planning</li>
-                    <li class="footer__li">+ Tour Consultancy</li>
-                </ul>
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span">06</span>
+            <img src="{% static 'icons/core  6.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3">Special Offers</h3>
+            <p class="swiperPagination__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
+            </p> 
             </div>
             
-            <div class="footer__section">
-                
-                <h3 class="footer__h3">Contact Us.</h3>
-                <div class="footer__card">
-                    <img src="{% static 'icons//phone.svg' %}" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
+        </div>
+        <div class="swiperPagination__bullets"></div>
+        </div>
+</section>
+
+<section class="sectionMenu">
+    <img src="{% static 'icons/donut.svg' %}" alt="" class="sectionMenu__img">
+        <h2 class="sectionMenu__h2">menu</h2>
+        <h1 class="sectionMenu__h1">Our Food Menu</h1>
+        <div class="swiper swiperColumn">
+        <div class="swiper-wrapper swiperColumn__wrapper">
+            <div class="swiper-slide swiperColumn__slide">
+                <img src="{% static 'images/eggBacon.jpg' %}" alt="" class="swiperColumn__img">
+                <div class="swiperColumn__text">
+                    <h3 class="swiperColumn__h3">Eggs & Bacon</h3>
+                    <p class="swiperColumn__p">
+                        Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
+                        sed do eiusmod tempor.
+                    </p>
                 </div>
-                <div class="footer__card">
-                    <img src="{% static 'icons//mail.svg' %}" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
+            </div>
+            <div class="swiper-slide swiperColumn__slide">
+                <img src="{% static 'images/coffe.jpg' %}" alt="" class="swiperColumn__img">
+                <div class="swiperColumn__text">
+                    <h3 class="swiperColumn__h3">Tea or Coffe</h3>
+                    <p class="swiperColumn__p">
+                        Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
+                        sed do eiusmod tempor.
+                    </p>
                 </div>
-                <div class="footer__card">
-                    <img src="{% static 'icons//location.svg' %}" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
+            </div>
+            <div class="swiper-slide swiperColumn__slide">
+                <img src="{% static 'images/oatmeal.jpg' %}" alt="" class="swiperColumn__img">
+                <div class="swiperColumn__text">
+                    <h3 class="swiperColumn__h3">Chia Oatmeal</h3>
+                    <p class="swiperColumn__p">
+                        Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
+                        sed do eiusmod tempor.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide swiperColumn__slide">
+                <img src="{% static 'images/fruit.jpg' %}" alt="" class="swiperColumn__img">
+                <div class="swiperColumn__text">
+                    <h3 class="swiperColumn__h3">Fruit Parfait</h3>
+                    <p class="swiperColumn__p">
+                        Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
+                        sed do eiusmod tempor.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide swiperColumn__slide">
+                <img src="{% static 'images/marmalade.jpg' %}" alt="" class="swiperColumn__img">
+                <div class="swiperColumn__text">
+                    <h3 class="swiperColumn__h3">Marmalade Selection</h3>
+                    <p class="swiperColumn__p">
+                        Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
+                        sed do eiusmod tempor.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide swiperColumn__slide">
+                <img src="{% static 'images/cheese.jpg' %}" alt="" class="swiperColumn__img">
+                <div class="swiperColumn__text">
+                    <h3 class="swiperColumn__h3">Cheese Plate</h3>
+                    <p class="swiperColumn__p">
+                        Lorem ipsum dolor sit amet, consectetur adip isicing elit, 
+                        sed do eiusmod tempor.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="footer__bottom">
-            <div class="footer__container">
-                <p class="footer__p--bold">Copyright By@Example - 2020</p>
-                <p class="footer__p--bold">Terms of use|Privacy Environmental Policy</p>
+    </div>
+    <div class="sectionMenu__controls">
+        <div class="swiperColumn__button swiperColumn__button--prev"><</div>
+        <div class="swiperColumn__button swiperColumn__button--next">></div>
+    </div>
+    
+    <div class="swiper swiperFlex">
+        <div class="swiper-wrapper swiperFlex__wrapper">
+            <div class="swiper-slide swiperFlex__slide">
+            <img src="{% static 'images/eggBacon.jpg' %}" alt="" class="swiperFlex__img">
             </div>
+            <div class="swiper-slide swiperFlex__slide">
+            <img src="{% static 'images/fruit.jpg' %}" alt="" class="swiperFlex__img">
+            </div>
+            <div class="swiper-slide swiperFlex__slide">
+            <img src="{% static 'images//salad.jpg' %}" alt="" class="swiperFlex__img">
+            </p>
+            </div>    
         </div>
-    </footer>
+        <div class="swiperFlex__bullets"></div>
+    </div>
+</section>
+
+<section class="sectionDetails">
+    <div class="sectionDetails__container">
+
+        <div class="sectionDetails__card">
+            <img src="{% static 'icons/rocket--dark.svg' %}" alt="" class="sectionDetails__img">
+            <div class="sectionDetails__text">
+                <span class="sectionDetails__span">84k<span class="sectionDetails__span--small">+</span></span>
+                <p class="sectionDetails__p">Projects are Completed</p>
+            </div> 
+        </div>
+        <div class="sectionDetails__card">
+            <img src="{% static 'icons/team--dark.svg' %}" alt="" class="sectionDetails__img">
+            <div class="sectionDetails__text">
+                <span class="sectionDetails__span">10Mk<span class="sectionDetails__span--small">+</span></span>
+                <p class="sectionDetails__p">Active Backers Around World</p>
+            </div> 
+        </div>
+        <div class="sectionDetails__card">
+            <img src="{% static 'icons/chart--dark.svg' %}" alt="" class="sectionDetails__img">
+            <div class="sectionDetails__text">
+                <span class="sectionDetails__span">02K<span class="sectionDetails__span--small">+</span></span>
+                <p class="sectionDetails__p">Categories Served</p>
+            </div> 
+        </div>
+        <div class="sectionDetails__card">
+            <img src="{% static 'icons/book--dark.svg' %}" alt="" class="sectionDetails__img">
+            <div class="sectionDetails__text">
+                <span class="sectionDetails__span">100M<span class="sectionDetails__span--small">+</span></span>
+                <p class="sectionDetails__p">Idea Raised Funds</p>
+            </div> 
+        </div>
+    </div>
+</section>
+
+{% endblock %}
 
 
-    <script src="https://kit.fontawesome.com/c45d098780.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="{% static 'javascript/script.js' %}"></script>
-</body>
-</html>
+

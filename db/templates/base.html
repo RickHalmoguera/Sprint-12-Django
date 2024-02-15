@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Hotel Miranda</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__topContainer topContainer">
+            <p class="topContainer__p">We Make Your Feel Comfortable</p>
+        
+            <nav class="nav">
+                <img src="{% static 'icons/Menu.svg' %}" alt="Menu" class="nav__icon" id="menuBtn">
+                <div class="nav__logo logo">
+                    <div class="logo__square logo__square--light">
+                        <span class="logo__span">h</span>
+                    </div>
+                    <div class="logo__text">
+                        <p class="logo__p--bold">hotel</p>
+                        <p class="logo__p--regular">miranda</p>
+                    </div>
+                </div>
+                <ul class=" header__ul header__ul--desktop">
+                    <li class="header__li"><a href="{% url 'about' %}" class="header__a">About Us</a></li>
+                    <li class="header__li"><a href="{% url 'available_rooms' %}" class="header__a">Rooms</a></li>
+                    <li class="header__li"><a href="{% url 'offers' %}" class="header__a">Offers</a></li>
+                    <li class="header__li"><a href="{% url 'contact' %}" class="header__a">Contact</a></li>
+                </ul>
+                <div class="nav__iconContainer">
+                    <img src="{% static 'icons/user.svg' %}" alt="user" class="nav__icon">
+                    <img src="{% static 'icons/search.svg' %}" alt="search" class="nav__icon">
+                </div>
+            </nav>
+        </div>
+        <div class="header__dropMenu" id="dropMenu">
+            <ul class="header__ul">
+                <li class="header__li"><a href="{% url 'about' %}" class="header__a">About Us</a></li>
+                <li class="header__li"><a href="{% url 'available_rooms' %}" class="header__a">Rooms</a></li>
+                <li class="header__li"><a href="{% url 'offers' %}" class="header__a">Offers</a></li>
+                <li class="header__li"><a href="{% url 'contact' %}" class="header__a">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    {% block content %} {% endblock %}
+ 
+    <footer class="footer">
+        <div class="footer__inner">
+                
+            <div class="footer__section">
+                <div class="logo">
+                    <div class="logo__square logo__square--highlight">
+                         <span class="logo__span logo__span--light">h</span>
+                    </div>
+                    <div class="logo__text">
+                        <p class="logo__p--bold">hotel</p>
+                        <p class="logo__p--regular">miranda</p>
+                    </div>
+                </div>
+        
+                <p class="footer__p">
+                    Lorem ipsum dolor sit amet, consect etur adipisicing elit, 
+                    sed doing eius mod tempor incididunt ut labore et dolore magna 
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco 
+                    laboris nisi.
+                </p>
+                <div class="footer__socials">
+                    <i class="fa-brands fa-square-facebook footer__icon"></i>
+                    <i class="fa-brands fa-square-twitter footer__icon"></i>
+                    <i class="fa-brands fa-square-behance footer__icon"></i>
+                    <i class="fa-brands fa-linkedin footer__icon"></i>
+                    <i class="fa-brands fa-square-youtube footer__icon"></i>
+                </div>
+            </div>
+    
+            <div class="footer__section">
+                <h3 class="footer__h3">Services.</h3>
+                <ul class="footer__ul">
+                    <li class="footer__li">+ Restaurant & Bar</li>
+                    <li class="footer__li">+ Swimming Pool</li>
+                    <li class="footer__li">+ Wellness & Spa</li>
+                    <li class="footer__li">+ Restaurant</li>
+                    <li class="footer__li">+ Conference Room</li>
+                    <li class="footer__li">+ Coctail Party House</li>
+                    <li class="footer__li">+ Gaming Zone</li>
+                    <li class="footer__li">+ Marriage Party</li>
+                    <li class="footer__li">+ Party Planning</li>
+                    <li class="footer__li">+ Tour Consultancy</li>
+                </ul>
+            </div>
+            
+            <div class="footer__section">
+                
+                <h3 class="footer__h3">Contact Us.</h3>
+                <div class="footer__card">
+                    <img src="{% static 'icons//phone.svg' %}" alt="" class="footer__img">
+                    <div class="footer__text">
+                        <span class="footer__span footer__span--dark">Phone Number</span>
+                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
+                    </div>
+                </div>
+                <div class="footer__card">
+                    <img src="{% static 'icons//mail.svg' %}" alt="" class="footer__img">
+                    <div class="footer__text">
+                        <span class="footer__span footer__span--dark">Phone Number</span>
+                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
+                    </div>
+                </div>
+                <div class="footer__card">
+                    <img src="{% static 'icons//location.svg' %}" alt="" class="footer__img">
+                    <div class="footer__text">
+                        <span class="footer__span footer__span--dark">Phone Number</span>
+                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__container">
+                <p class="footer__p--bold">Copyright By@Example - 2020</p>
+                <p class="footer__p--bold">Terms of use|Privacy Environmental Policy</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/c45d098780.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'javascript/script.js' %}"></script>
+</body>
+</html>

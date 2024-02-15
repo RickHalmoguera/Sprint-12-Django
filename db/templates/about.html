@@ -1,290 +1,161 @@
+{% extends 'base.html' %}
 {% load static %}
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>About Us</title>
- </head>
- <body>
-    <header class="header">
-        <div class="header__topContainer topContainer">
-            <p class="topContainer__p">We Make Your Feel Comfortable</p>
+{% block content %} 
+<section class="sectionHero">
+    <div class="sectionHero__container">
+        <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
+        <h1 class="sectionHero__h1">About Us</h1>
+        <div class="sectionHero__links">
+            <p class="sectionHero__p"><a href="{% url 'index' %}" class="sectionHero__a">Home</a> | About </p>
+        </div>
+
+    </div>
+</section>
+<section class="sectionHotelDescription">
+    <iframe
+        class="sectionHotelDescription__video"
+        src="https://www.youtube.com/embed/Bu3Doe45lcU?si=wdNK-3QMmlm3VshQ&amp;clip=Ugkx9RNabzWcvOxCnmLbJgKH6Nj5D4cGHx74&amp;clipt=EKjDARj4yQQ" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+
+    <h1 class="sectionHotelDescription__h1">
+        Hello. Our hotel has been present for over 20 years. We make the best for all our customers.
+    </h1>
+
+    <div class="sectionHotelDescription__icons">
+        <div class="sectionHotelDescription__item">
+            <img src="{% static 'icons/breakfast.svg' %}" alt="" class="sectionHotelDescription__icon">
+            <span class="sectionHotelDescription__span">breakfast</>
+        </div>
+        <div class="sectionHotelDescription__item">
+            <img src="{% static 'icons/plane.svg' %}" alt="" class="sectionHotelDescription__icon">
+            <span class="sectionHotelDescription__span">airport pickup</>
+        </div>
+        <div class="sectionHotelDescription__item">
+            <img src="{% static 'icons/guide.svg' %}" alt="" class="sectionHotelDescription__icon">
+            <span class="sectionHotelDescription__span">city guide</>
+        </div>
+        <div class="sectionHotelDescription__item">
+            <img src="{% static 'icons/room.svg' %}" alt="" class="sectionHotelDescription__icon">
+            <span class="sectionHotelDescription__span">luxury room</span>
+        </div>
         
-            <nav class="nav">
-                <img src="{% static 'icons/Menu.svg' %}" alt="Menu" class="nav__icon" id="menuBtn">
-                <div class="nav__logo logo">
-                    <div class="logo__square logo__square--light">
-                        <span class="logo__span">h</span>
-                    </div>
-                    <div class="logo__text">
-                        <p class="logo__p--bold">hotel</p>
-                        <p class="logo__p--regular">miranda</p>
-                    </div>
-                </div>
-                <ul class=" header__ul header__ul--desktop">
-                    <li class="header__li"><a href="./about.html" class="header__a">About Us</a></li>
-                    <li class="header__li"><a href="./rooms.html" class="header__a">Rooms</a></li>
-                    <li class="header__li"><a href="./offers.html" class="header__a">Offers</a></li>
-                    <li class="header__li"><a href="./contact.html" class="header__a">Contact</a></li>
-                </ul>
-                <div class="nav__iconContainer">
-                    <img src="{% static 'icons/user.svg' %}" alt="user" class="nav__icon">
-                    <img src="{% static 'icons/search.svg' %}" alt="search" class="nav__icon">
-                </div>
-            </nav>
+    </div>
+
+    <div class="sectionHotelDescription__restaurant">
+        <img src="{% static 'images/restaurant.jpg' %}" alt="" class="sectionHotelDescription__img">
+        <div class="restaurant__container">
+            <h2 class="sectionHotelDescription__h2">Restaurant</h2>
+            <h1 class="sectionHotelDescription__h1 sectionHotelDescription__h1--left">Get Restaurant Facilities & Many Other More</h1>    
+            <p class="sectionHotelDescription__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            <button class="button button--dark">take a tour</button>
         </div>
-        <div class="header__dropMenu" id="dropMenu">
-            <ul class="header__ul">
-                <li class="header__li"><a href="./about.html" class="header__a">About Us</a></li>
-                <li class="header__li"><a href="./rooms.html" class="header__a">Rooms</a></li>
-                <li class="header__li"><a href="./offers.html" class="header__a">Offers</a></li>
-                <li class="header__li"><a href="./contact.html" class="header__a">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-    <section class="sectionHero">
-        <div class="sectionHero__container">
-            <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
-            <h1 class="sectionHero__h1">About Us</h1>
-            <div class="sectionHero__links">
-                <p class="sectionHero__p"><a href="./index.html" class="sectionHero__a">Home</a> | About </p>
-            </div>
 
         </div>
-    </section>
-    <section class="sectionHotelDescription">
-        <iframe
-            class="sectionHotelDescription__video"
-            src="https://www.youtube.com/embed/Bu3Doe45lcU?si=wdNK-3QMmlm3VshQ&amp;clip=Ugkx9RNabzWcvOxCnmLbJgKH6Nj5D4cGHx74&amp;clipt=EKjDARj4yQQ" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
+    </div>
+</section>
 
-        <h1 class="sectionHotelDescription__h1">
-            Hello. Our hotel has been present for over 20 years. We make the best for all our customers.
-        </h1>
-
-        <div class="sectionHotelDescription__icons">
-            <div class="sectionHotelDescription__item">
-                <img src="{% static 'icons/breakfast.svg' %}" alt="" class="sectionHotelDescription__icon">
-                <span class="sectionHotelDescription__span">breakfast</>
+<section class="sectionFacilities sectionFacilities--dark">
+    <h2 class="sectionFacilities__h2 sectionFacilities__h2--light">facilities</h2>
+    <h1 class="sectionFacilities__h1 sectionFacilities__h1--light">Core Features</h1>
+    <div class="swiper swiperPagination swiperPagination--dark">
+        <div class="swiper-wrapper swiperPagination__wrapper">
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span swiperPagination__span--dark">01</span>
+            <img src="{% static 'icons/core 1.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3 swiperPagination__h3--light">Have High Rating</h3>
+            <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
+            </p>
             </div>
-            <div class="sectionHotelDescription__item">
-                <img src="{% static 'icons/plane.svg' %}" alt="" class="sectionHotelDescription__icon">
-                <span class="sectionHotelDescription__span">airport pickup</>
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span swiperPagination__span--dark">02</span>
+            <img src="{% static 'icons/core 2.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3 swiperPagination__h3--light">Quiet Hours</h3>
+            <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
+            </p>
             </div>
-            <div class="sectionHotelDescription__item">
-                <img src="{% static 'icons/guide.svg' %}" alt="" class="sectionHotelDescription__icon">
-                <span class="sectionHotelDescription__span">city guide</>
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span swiperPagination__span--dark">03</span>
+            <img src="{% static 'icons/core 3.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3 swiperPagination__h3--light">Best Locations</h3>
+            <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
+            </p>
             </div>
-            <div class="sectionHotelDescription__item">
-                <img src="{% static 'icons/room.svg' %}" alt="" class="sectionHotelDescription__icon">
-                <span class="sectionHotelDescription__span">luxury room</span>
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span swiperPagination__span--dark">04</span>
+            <img src="{% static 'icons/core 4.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3 swiperPagination__h3--light">Free Cancellations</h3>
+            <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
+            </p>
+            </div>
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span swiperPagination__span--dark">05</span>
+            <img src="{% static 'icons/core 5.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3 swiperPagination__h3--light">Payment Options</h3>
+            <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
+            </p>
+            </div>
+            <div class="swiper-slide swiperPagination__slide">
+            <span class="swiperPagination__span swiperPagination__span--dark">06</span>
+            <img src="{% static 'icons/core  6.svg' %}" alt="" class="swiperPagination__img">
+            <h3 class="swiperPagination__h3 swiperPagination__h3--light">Special Offers</h3>
+            <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna..
+            </p> 
             </div>
             
         </div>
+    </div>
+    <div class="swiperPagination__bullets"></div>
+</section>
 
-        <div class="sectionHotelDescription__restaurant">
-            <img src="{% static 'images/restaurant.jpg' %}" alt="" class="sectionHotelDescription__img">
-            <div class="restaurant__container">
-                <h2 class="sectionHotelDescription__h2">Restaurant</h2>
-                <h1 class="sectionHotelDescription__h1 sectionHotelDescription__h1--left">Get Restaurant Facilities & Many Other More</h1>    
-                <p class="sectionHotelDescription__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                <button class="button button--dark">take a tour</button>
+<section class="sectionCounter">
+    <h2 class="sectionCounter__h2">counter</h2>
+    <h1 class="sectionCounter__h1">Some Fun Facts</h1>
+    <div class="sectionCounter__flex">
+        <div class="sectionCounter__item">
+            <img src="{% static 'icons/happy.svg' %}" alt="" class="sectionCounter__icon">
+            <div class="sectionCounter__text">
+                <p class="sectionCounter__p">8000</p>
+                <span class="sectionCounter__span">Happy Users</span>
             </div>
-
+            <img src="{% static 'icons/arrowLight.svg' %}" alt="" class="sectionCounter__img sectionCounter__img--left">
+        </div>
+        <div class="sectionCounter__item">
+            <img src="{% static 'icons/likes.svg' %}" alt="" class="sectionCounter__icon">
+            <div class="sectionCounter__text">
+                <p class="sectionCounter__p">100M</p>
+                <span class="sectionCounter__span">Reviews & Appriciate</span>
+            </div>
+            <img src="{% static 'icons/arrowLight.svg' %}" alt="" class="sectionCounter__img sectionCounter__img--left">
+        </div>
+        <div class="sectionCounter__item">
+            <img src="{% static 'icons/world.svg' %}" alt="" class="sectionCounter__icon">
+            <div class="sectionCounter__text">
+                <p class="sectionCounter__p">100</p>
+                <span class="sectionCounter__span">Country Coverage</span>
+            </div>
+            <img src="{% static 'icons/arrowLight.svg' %}" alt="" class="sectionCounter__img sectionCounter__img--left">
+        </div>
+    </div>    
+    <div class="swiper swiper2Slide">
+        <div class="swiper-wrapper swiper2Slide__wrapper">
+            <div class="swiper-slide swiper2Slide__slide">
+            <img src="{% static 'images/fun1.jpg' %}" alt="" class="swiper2Slide__img">
+            </div>
+            <div class="swiper-slide swiper2Slide__slide">
+            <img src="{% static 'images/fun2.jpg' %}" alt="" class="swiper2Slide__img">
             </div>
         </div>
-    </section>
-
-    <section class="sectionFacilities sectionFacilities--dark">
-        <h2 class="sectionFacilities__h2 sectionFacilities__h2--light">facilities</h2>
-        <h1 class="sectionFacilities__h1 sectionFacilities__h1--light">Core Features</h1>
-        <div class="swiper swiperPagination swiperPagination--dark">
-            <div class="swiper-wrapper swiperPagination__wrapper">
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span swiperPagination__span--dark">01</span>
-                <img src="{% static 'icons/core 1.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3 swiperPagination__h3--light">Have High Rating</h3>
-                <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p>
-              </div>
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span swiperPagination__span--dark">02</span>
-                <img src="{% static 'icons/core 2.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3 swiperPagination__h3--light">Quiet Hours</h3>
-                <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p>
-              </div>
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span swiperPagination__span--dark">03</span>
-                <img src="{% static 'icons/core 3.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3 swiperPagination__h3--light">Best Locations</h3>
-                <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p>
-              </div>
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span swiperPagination__span--dark">04</span>
-                <img src="{% static 'icons/core 4.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3 swiperPagination__h3--light">Free Cancellations</h3>
-                <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p>
-              </div>
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span swiperPagination__span--dark">05</span>
-                <img src="{% static 'icons/core 5.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3 swiperPagination__h3--light">Payment Options</h3>
-                <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p>
-              </div>
-              <div class="swiper-slide swiperPagination__slide">
-                <span class="swiperPagination__span swiperPagination__span--dark">06</span>
-                <img src="{% static 'icons/core  6.svg' %}" alt="" class="swiperPagination__img">
-                <h3 class="swiperPagination__h3 swiperPagination__h3--light">Special Offers</h3>
-                <p class="swiperPagination__p swiperPagination__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna..
-                </p> 
-              </div>
-              
-            </div>
-        </div>
-        <div class="swiperPagination__bullets"></div>
-    </section>
-
-    <section class="sectionCounter">
-        <h2 class="sectionCounter__h2">counter</h2>
-        <h1 class="sectionCounter__h1">Some Fun Facts</h1>
-        <div class="sectionCounter__flex">
-            <div class="sectionCounter__item">
-                <img src="{% static 'icons/happy.svg' %}" alt="" class="sectionCounter__icon">
-                <div class="sectionCounter__text">
-                    <p class="sectionCounter__p">8000</p>
-                    <span class="sectionCounter__span">Happy Users</span>
-                </div>
-                <img src="{% static 'icons/arrowLight.svg' %}" alt="" class="sectionCounter__img sectionCounter__img--left">
-            </div>
-            <div class="sectionCounter__item">
-                <img src="{% static 'icons/likes.svg' %}" alt="" class="sectionCounter__icon">
-                <div class="sectionCounter__text">
-                    <p class="sectionCounter__p">100M</p>
-                    <span class="sectionCounter__span">Reviews & Appriciate</span>
-                </div>
-                <img src="{% static 'icons/arrowLight.svg' %}" alt="" class="sectionCounter__img sectionCounter__img--left">
-            </div>
-            <div class="sectionCounter__item">
-                <img src="{% static 'icons/world.svg' %}" alt="" class="sectionCounter__icon">
-                <div class="sectionCounter__text">
-                    <p class="sectionCounter__p">100</p>
-                    <span class="sectionCounter__span">Country Coverage</span>
-                </div>
-                <img src="{% static 'icons/arrowLight.svg' %}" alt="" class="sectionCounter__img sectionCounter__img--left">
-            </div>
-        </div>    
-        <div class="swiper swiper2Slide">
-            <div class="swiper-wrapper swiper2Slide__wrapper">
-              <div class="swiper-slide swiper2Slide__slide">
-                <img src="{% static 'images/fun1.jpg' %}" alt="" class="swiper2Slide__img">
-              </div>
-              <div class="swiper-slide swiper2Slide__slide">
-                <img src="{% static 'images/fun2.jpg' %}" alt="" class="swiper2Slide__img">
-              </div>
-            </div>
-        </div>
-        <div class="swiper2Slide__bullets"></div>
-    </section>
-    <footer class="footer">
-        <div class="footer__inner">
-                
-            <div class="footer__section">
-                <div class="logo">
-                    <div class="logo__square logo__square--highlight">
-                         <span class="logo__span logo__span--light">h</span>
-                    </div>
-                    <div class="logo__text">
-                        <p class="logo__p--bold">hotel</p>
-                        <p class="logo__p--regular">miranda</p>
-                    </div>
-                </div>
-        
-                <p class="footer__p">
-                    Lorem ipsum dolor sit amet, consect etur adipisicing elit, 
-                    sed doing eius mod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco 
-                    laboris nisi.
-                </p>
-                <div class="footer__socials">
-                    <i class="fa-brands fa-square-facebook footer__icon"></i>
-                    <i class="fa-brands fa-square-twitter footer__icon"></i>
-                    <i class="fa-brands fa-square-behance footer__icon"></i>
-                    <i class="fa-brands fa-linkedin footer__icon"></i>
-                    <i class="fa-brands fa-square-youtube footer__icon"></i>
-                </div>
-            </div>
-    
-            <div class="footer__section">
-                <h3 class="footer__h3">Services.</h3>
-                <ul class="footer__ul">
-                    <li class="footer__li">+ Restaurant & Bar</li>
-                    <li class="footer__li">+ Swimming Pool</li>
-                    <li class="footer__li">+ Wellness & Spa</li>
-                    <li class="footer__li">+ Restaurant</li>
-                    <li class="footer__li">+ Conference Room</li>
-                    <li class="footer__li">+ Coctail Party House</li>
-                    <li class="footer__li">+ Gaming Zone</li>
-                    <li class="footer__li">+ Marriage Party</li>
-                    <li class="footer__li">+ Party Planning</li>
-                    <li class="footer__li">+ Tour Consultancy</li>
-                </ul>
-            </div>
-            
-            <div class="footer__section">
-                
-                <h3 class="footer__h3">Contact Us.</h3>
-                <div class="footer__card">
-                    <img src="{% static 'icons//phone.svg' %}" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
-                </div>
-                <div class="footer__card">
-                    <img src="{% static 'icons//mail.svg' %}" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
-                </div>
-                <div class="footer__card">
-                    <img src="{% static 'icons//location.svg' %}" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <div class="footer__container">
-                <p class="footer__p--bold">Copyright By@Example - 2020</p>
-                <p class="footer__p--bold">Terms of use|Privacy Environmental Policy</p>
-            </div>
-        </div>
-    </footer>
-
-  
-
-</body>
-<script src="https://kit.fontawesome.com/c45d098780.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="{% static 'javascript/script.js' %}"></script>
- </html>
+    </div>
+    <div class="swiper2Slide__bullets"></div>
+</section>
+{% endblock %}

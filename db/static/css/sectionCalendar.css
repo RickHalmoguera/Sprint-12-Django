@@ -26,6 +26,7 @@
 }
 
 .sectionCalendar {
+  position: relative;
   background-color: #222;
   padding: 2em 1em;
 }

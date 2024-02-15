@@ -1,203 +1,77 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Contact Us</title>
-</head>
-<body>
-    <header class="header">
-        <div class="header__topContainer topContainer">
-            <p class="topContainer__p">We Make Your Feel Comfortable</p>
-        
-            <nav class="nav">
-                <img src="./icons/Menu.svg" alt="Menu" class="nav__icon" id="menuBtn">
-                <div class="nav__logo logo">
-                    <div class="logo__square logo__square--light">
-                        <span class="logo__span">h</span>
-                    </div>
-                    <div class="logo__text">
-                        <p class="logo__p--bold">hotel</p>
-                        <p class="logo__p--regular">miranda</p>
-                    </div>
-                </div>
-                <ul class=" header__ul header__ul--desktop">
-                    <li class="header__li"><a href="./about.html" class="header__a">About Us</a></li>
-                    <li class="header__li"><a href="./rooms.html" class="header__a">Rooms</a></li>
-                    <li class="header__li"><a href="./offers.html" class="header__a">Offers</a></li>
-                    <li class="header__li"><a href="./contact.html" class="header__a">Contact</a></li>
-                </ul>
-                <div class="nav__iconContainer">
-                    <img src="./icons/user.svg" alt="user" class="nav__icon">
-                    <img src="./icons/search.svg" alt="search" class="nav__icon">
-                </div>
-            </nav>
+{% block content %} 
+<section class="sectionHero">
+    <div class="sectionHero__container">
+        <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
+        <h1 class="sectionHero__h1">Contact</h1>
+        <div class="sectionHero__links">
+            <p class="sectionHero__p"><a href="{% url 'index' %}" class="sectionHero__a">Home</a> | Contact</p>
         </div>
-        <div class="header__dropMenu" id="dropMenu">
-            <ul class="header__ul">
-                <li class="header__li"><a href="./about.html" class="header__a">About Us</a></li>
-                <li class="header__li"><a href="./rooms.html" class="header__a">Rooms</a></li>
-                <li class="header__li"><a href="./offers.html" class="header__a">Offers</a></li>
-                <li class="header__li"><a href="./contact.html" class="header__a">Contact</a></li>
-            </ul>
+
+    </div>
+</section>
+
+<section class="sectionContactInfo">
+    <div class="sectionContactInfo__card">
+        <p class="sectionContactInfo__p">01</p>
+        <img src="./icons//mail.svg" alt="" class="sectionContactInfo__img">
+        <div class="sectionContactInfo__text">
+            <span class="sectionContactInfo__span sectionContactInfo__span--dark">Hotel Address</span>
+            <span class="sectionContactInfo__span sectionContactInfo__span--light">C. de la Princesa, 31, 2º, 28008 Madrid</span>
         </div>
-    </header>
-    <section class="sectionHero">
-        <div class="sectionHero__container">
-            <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
-            <h1 class="sectionHero__h1">Contact</h1>
-            <div class="sectionHero__links">
-                <p class="sectionHero__p"><a href="./index.html" class="sectionHero__a">Home</a> | Contact</p>
+    </div>
+    <div class="sectionContactInfo__card">
+        <p class="sectionContactInfo__p">02</p>
+        <img src="./icons//phone.svg" alt="" class="sectionContactInfo__img">
+        <div class="sectionContactInfo__text">
+            <span class="sectionContactInfo__span sectionContactInfo__span--dark">Phone Number</span>
+            <span class="sectionContactInfo__span sectionContactInfo__span--light">+34 650 25 82 66</span>
+        </div>
+    </div>
+    <div class="sectionContactInfo__card">
+        <p class="sectionContactInfo__p">03</p>
+        <img src="./icons//location.svg" alt="" class="sectionContactInfo__img">
+        <div class="sectionContactInfo__text">
+            <span class="sectionContactInfo__span sectionContactInfo__span--dark">Email</span>
+            <span class="sectionContactInfo__span sectionContactInfo__span--light">halmoguerar@gmail.com</span>
+        </div>
+    </div>
+</section>
+
+
+<form action="" class="sectionContactForm">
+    <div class="sectionContactForm__topGroup">
+        <div class="sectionContactForm__group">
+            <div class="sectionContactForm__container">
+                <img src="./icons/userSmall.svg" alt="" class="sectionContactForm__img">
+                <input  class="sectionContactForm__input" type="text" placeholder="Your full name">
+            </div>
+            <div class="sectionContactForm__container">
+                <img src="./icons/phoneSmall.svg" alt="" class="sectionContactForm__img">
+                <input  class="sectionContactForm__input" type="text" placeholder="Add phone number">
             </div>
 
         </div>
-    </section>
 
-    <section class="sectionContactInfo">
-        <div class="sectionContactInfo__card">
-            <p class="sectionContactInfo__p">01</p>
-            <img src="./icons//mail.svg" alt="" class="sectionContactInfo__img">
-            <div class="sectionContactInfo__text">
-                <span class="sectionContactInfo__span sectionContactInfo__span--dark">Hotel Address</span>
-                <span class="sectionContactInfo__span sectionContactInfo__span--light">C. de la Princesa, 31, 2º, 28008 Madrid</span>
+        <div class="sectionContactForm__group">
+            <div class="sectionContactForm__container">
+                <img src="./icons/mailSmall.svg" alt="" class="sectionContactForm__img">
+                <input  class="sectionContactForm__input" type="email" placeholder="Enter email address">
             </div>
-        </div>
-        <div class="sectionContactInfo__card">
-            <p class="sectionContactInfo__p">02</p>
-            <img src="./icons//phone.svg" alt="" class="sectionContactInfo__img">
-            <div class="sectionContactInfo__text">
-                <span class="sectionContactInfo__span sectionContactInfo__span--dark">Phone Number</span>
-                <span class="sectionContactInfo__span sectionContactInfo__span--light">+34 650 25 82 66</span>
+            <div class="sectionContactForm__container">
+                <img src="./icons/copySmall.svg" alt="" class="sectionContactForm__img">
+                <input  class="sectionContactForm__input" type="text" placeholder="Enter subject">
             </div>
-        </div>
-        <div class="sectionContactInfo__card">
-            <p class="sectionContactInfo__p">03</p>
-            <img src="./icons//location.svg" alt="" class="sectionContactInfo__img">
-            <div class="sectionContactInfo__text">
-                <span class="sectionContactInfo__span sectionContactInfo__span--dark">Email</span>
-                <span class="sectionContactInfo__span sectionContactInfo__span--light">halmoguerar@gmail.com</span>
-            </div>
-        </div>
-    </section>
 
-    
-    <form action="" class="sectionContactForm">
-        <div class="sectionContactForm__topGroup">
-            <div class="sectionContactForm__group">
-                <div class="sectionContactForm__container">
-                    <img src="./icons/userSmall.svg" alt="" class="sectionContactForm__img">
-                    <input  class="sectionContactForm__input" type="text" placeholder="Your full name">
-                </div>
-                <div class="sectionContactForm__container">
-                    <img src="./icons/phoneSmall.svg" alt="" class="sectionContactForm__img">
-                    <input  class="sectionContactForm__input" type="text" placeholder="Add phone number">
-                </div>
-    
-            </div>
-    
-            <div class="sectionContactForm__group">
-                <div class="sectionContactForm__container">
-                    <img src="./icons/mailSmall.svg" alt="" class="sectionContactForm__img">
-                    <input  class="sectionContactForm__input" type="email" placeholder="Enter email address">
-                </div>
-                <div class="sectionContactForm__container">
-                    <img src="./icons/copySmall.svg" alt="" class="sectionContactForm__img">
-                    <input  class="sectionContactForm__input" type="text" placeholder="Enter subject">
-                </div>
-    
-            </div>
-        
         </div>
-        <div class="sectionContactForm__container">
-            <img src="./icons/penSmall.svg" alt="" class="sectionContactForm__img--top">
-            <textarea class="sectionContactForm__textArea" rows="10" placeholder="Enter message"></textarea>
-        </div>
-        <input type="submit" value="send" class="button button--dark sectionContactForm__input--center ">
-    </form>
-    <footer class="footer">
-        <div class="footer__inner">
-                
-            <div class="footer__section">
-                <div class="logo">
-                    <div class="logo__square logo__square--highlight">
-                         <span class="logo__span logo__span--light">h</span>
-                    </div>
-                    <div class="logo__text">
-                        <p class="logo__p--bold">hotel</p>
-                        <p class="logo__p--regular">miranda</p>
-                    </div>
-                </div>
-        
-                <p class="footer__p">
-                    Lorem ipsum dolor sit amet, consect etur adipisicing elit, 
-                    sed doing eius mod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco 
-                    laboris nisi.
-                </p>
-                <div class="footer__socials">
-                    <i class="fa-brands fa-square-facebook footer__icon"></i>
-                    <i class="fa-brands fa-square-twitter footer__icon"></i>
-                    <i class="fa-brands fa-square-behance footer__icon"></i>
-                    <i class="fa-brands fa-linkedin footer__icon"></i>
-                    <i class="fa-brands fa-square-youtube footer__icon"></i>
-                </div>
-            </div>
     
-            <div class="footer__section">
-                <h3 class="footer__h3">Services.</h3>
-                <ul class="footer__ul">
-                    <li class="footer__li">+ Restaurant & Bar</li>
-                    <li class="footer__li">+ Swimming Pool</li>
-                    <li class="footer__li">+ Wellness & Spa</li>
-                    <li class="footer__li">+ Restaurant</li>
-                    <li class="footer__li">+ Conference Room</li>
-                    <li class="footer__li">+ Coctail Party House</li>
-                    <li class="footer__li">+ Gaming Zone</li>
-                    <li class="footer__li">+ Marriage Party</li>
-                    <li class="footer__li">+ Party Planning</li>
-                    <li class="footer__li">+ Tour Consultancy</li>
-                </ul>
-            </div>
-            
-            <div class="footer__section">
-                
-                <h3 class="footer__h3">Contact Us.</h3>
-                <div class="footer__card">
-                    <img src="./icons//phone.svg" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
-                </div>
-                <div class="footer__card">
-                    <img src="./icons//mail.svg" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
-                </div>
-                <div class="footer__card">
-                    <img src="./icons//location.svg" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <div class="footer__container">
-                <p class="footer__p--bold">Copyright By@Example - 2020</p>
-                <p class="footer__p--bold">Terms of use|Privacy Environmental Policy</p>
-            </div>
-        </div>
-    </footer>
+    </div>
+    <div class="sectionContactForm__container">
+        <img src="./icons/penSmall.svg" alt="" class="sectionContactForm__img--top">
+        <textarea class="sectionContactForm__textArea" rows="10" placeholder="Enter message"></textarea>
+    </div>
+    <input type="submit" value="send" class="button button--dark sectionContactForm__input--center ">
+</form>
 
-</body>
-<script src="https://kit.fontawesome.com/c45d098780.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./javascript/script.js"></script>
-</html>
+{% endblock %}

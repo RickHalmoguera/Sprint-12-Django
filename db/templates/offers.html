@@ -1,581 +1,453 @@
+{% extends 'base.html' %}
 {% load static %}
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Offers</title>
- </head>
- <body>
-    <header class="header">
-        <div class="header__topContainer topContainer">
-            <p class="topContainer__p">We Make Your Feel Comfortable</p>
-        
-            <nav class="nav">
-                <img src="./icons/Menu.svg" alt="Menu" class="nav__icon" id="menuBtn">
-                <div class="nav__logo logo">
-                    <div class="logo__square logo__square--light">
-                        <span class="logo__span">h</span>
-                    </div>
-                    <div class="logo__text">
-                        <p class="logo__p--bold">hotel</p>
-                        <p class="logo__p--regular">miranda</p>
-                    </div>
-                </div>
-                <ul class=" header__ul header__ul--desktop">
-                    <li class="header__li"><a href="./about.html" class="header__a">About Us</a></li>
-                    <li class="header__li"><a href="./rooms.html" class="header__a">Rooms</a></li>
-                    <li class="header__li"><a href="./offers.html" class="header__a">Offers</a></li>
-                    <li class="header__li"><a href="./contact.html" class="header__a">Contact</a></li>
-                </ul>
-                <div class="nav__iconContainer">
-                    <img src="./icons/user.svg" alt="user" class="nav__icon">
-                    <img src="./icons/search.svg" alt="search" class="nav__icon">
-                </div>
-            </nav>
+{% block content %} 
+<section class="sectionHero">
+    <div class="sectionHero__container">
+        <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
+        <h1 class="sectionHero__h1">Ultimate Room</h1>
+        <div class="sectionHero__links">
+            <p class="sectionHero__p"><a href="{% url 'index' %}" class="sectionHero__a">Home</a> | Offers | Luxury Double Bed </p>
         </div>
-        <div class="header__dropMenu" id="dropMenu">
-            <ul class="header__ul">
-                <li class="header__li"><a href="./about.html" class="header__a">About Us</a></li>
-                <li class="header__li"><a href="./rooms.html" class="header__a">Rooms</a></li>
-                <li class="header__li"><a href="./offers.html" class="header__a">Offers</a></li>
-                <li class="header__li"><a href="./contact.html" class="header__a">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-    <section class="sectionHero">
-        <div class="sectionHero__container">
-            <h2 class="sectionHero__h2">the ultimate luxury experience</h2>
-            <h1 class="sectionHero__h1">Ultimate Room</h1>
-            <div class="sectionHero__links">
-                <p class="sectionHero__p"><a href="./index.html" class="sectionHero__a">Home</a> | Offers | Luxury Double Bed </p>
+
+    </div>
+</section>
+
+<section class="sectionOffers">
+    <div class="sectionOffers__card">
+        <div class="sectionOffers__imgContainer">
+            <img src="./images/room1.jpg" alt="" class="sectionOffers__img">
+            <div class="sectionOffers__prices">
+                <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
+                <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
             </div>
-
         </div>
-    </section>
-
-    <section class="sectionOffers">
-        <div class="sectionOffers__card">
-            <div class="sectionOffers__imgContainer">
-                <img src="./images/room1.jpg" alt="" class="sectionOffers__img">
-                <div class="sectionOffers__prices">
+        <div class="sectionOffers__text">
+            <div class="sectionOffers__topText">
+                <div class="topText__container">
+                    <h2 class="sectionOffers__h2">double bed</h2>
+                    <h1 class="sectionOffers__h1">Luxury Double Bed</h1>
+                </div>
+                <div class="sectionOffers__prices--alt">
                     <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
                     <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
                 </div>
             </div>
-            <div class="sectionOffers__text">
-                <div class="sectionOffers__topText">
-                    <div class="topText__container">
-                        <h2 class="sectionOffers__h2">double bed</h2>
-                        <h1 class="sectionOffers__h1">Luxury Double Bed</h1>
-                    </div>
-                    <div class="sectionOffers__prices--alt">
-                        <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
-                        <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
-                    </div>
-                </div>
-                <div class="sectionOffers__bottomText">
-                    <p class="sectionOffers__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate 
-                        velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                    <div class="sectionOffers__flex">
-                        <ul class="sectionOffers__ul">
-                            <li class="sectionOffers__li">
-                                <img src="./icons/AC.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Air conditioner</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/breakfastSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Breakfast</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/cleaning.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Cleaning</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/grocery.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Grocery</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/shop.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Shop Near</span>
-                            </li>
-                        </ul>
-    
-                        <ul class="sectionOffers__ul">
-                            <li class="sectionOffers__li">
-                                <img src="./icons/wifiSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">High Speed WiFi</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/kitchen.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Kitchen</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/shower.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Shower</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/bedSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Single Bed</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/towel.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Towels</span>
-                            </li>
-                        </ul>
-                    </div>    
-
-                </div>
-                <button class="button button--dark">book now</button>
-            </div>
-        </div>
-
-        <div class="sectionOffers__card">
-            <div class="sectionOffers__imgContainer">
-                <img src="./images/room1.jpg" alt="" class="sectionOffers__img">
-                <div class="sectionOffers__prices">
-                    <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
-                    <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
-                </div>
-            </div>
-            <div class="sectionOffers__text">
-                <div class="sectionOffers__topText">
-                    <div class="topText__container">
-                        <h2 class="sectionOffers__h2">double bed</h2>
-                        <h1 class="sectionOffers__h1">Luxury Double Bed</h1>
-                    </div>
-                    <div class="sectionOffers__prices--alt">
-                        <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
-                        <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
-                    </div>
-                </div>
-                <div class="sectionOffers__bottomText">
-                    <p class="sectionOffers__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate 
-                        velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                    <div class="sectionOffers__flex">
-                        <ul class="sectionOffers__ul">
-                            <li class="sectionOffers__li">
-                                <img src="./icons/AC.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Air conditioner</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/breakfastSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Breakfast</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/cleaning.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Cleaning</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/grocery.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Grocery</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/shop.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Shop Near</span>
-                            </li>
-                        </ul>
-    
-                        <ul class="sectionOffers__ul">
-                            <li class="sectionOffers__li">
-                                <img src="./icons/wifiSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">High Speed WiFi</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/kitchen.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Kitchen</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/shower.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Shower</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/bedSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Single Bed</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/towel.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Towels</span>
-                            </li>
-                        </ul>
-                    </div>    
-
-                </div>
-                <button class="button button--dark">book now</button>
-            </div>
-        </div>
-        <div class="sectionOffers__card">
-            <div class="sectionOffers__imgContainer">
-                <img src="./images/room1.jpg" alt="" class="sectionOffers__img">
-                <div class="sectionOffers__prices">
-                    <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
-                    <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
-                </div>
-            </div>
-            <div class="sectionOffers__text">
-                <div class="sectionOffers__topText">
-                    <div class="topText__container">
-                        <h2 class="sectionOffers__h2">double bed</h2>
-                        <h1 class="sectionOffers__h1">Luxury Double Bed</h1>
-                    </div>
-                    <div class="sectionOffers__prices--alt">
-                        <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
-                        <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
-                    </div>
-                </div>
-                <div class="sectionOffers__bottomText">
-                    <p class="sectionOffers__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate 
-                        velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                    <div class="sectionOffers__flex">
-                        <ul class="sectionOffers__ul">
-                            <li class="sectionOffers__li">
-                                <img src="./icons/AC.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Air conditioner</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/breakfastSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Breakfast</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/cleaning.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Cleaning</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/grocery.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Grocery</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/shop.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Shop Near</span>
-                            </li>
-                        </ul>
-    
-                        <ul class="sectionOffers__ul">
-                            <li class="sectionOffers__li">
-                                <img src="./icons/wifiSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">High Speed WiFi</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/kitchen.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Kitchen</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/shower.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Shower</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/bedSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Single Bed</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/towel.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Towels</span>
-                            </li>
-                        </ul>
-                    </div>    
-
-                </div>
-                <button class="button button--dark">book now</button>
-            </div>
-        </div>
-        <div class="sectionOffers__card">
-            <div class="sectionOffers__imgContainer">
-                <img src="./images/room1.jpg" alt="" class="sectionOffers__img">
-                <div class="sectionOffers__prices">
-                    <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
-                    <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
-                </div>
-            </div>
-            <div class="sectionOffers__text">
-                <div class="sectionOffers__topText">
-                    <div class="topText__container">
-                        <h2 class="sectionOffers__h2">double bed</h2>
-                        <h1 class="sectionOffers__h1">Luxury Double Bed</h1>
-                    </div>
-                    <div class="sectionOffers__prices--alt">
-                        <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
-                        <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
-                    </div>
-                </div>
-                <div class="sectionOffers__bottomText">
-                    <p class="sectionOffers__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate 
-                        velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                    <div class="sectionOffers__flex">
-                        <ul class="sectionOffers__ul">
-                            <li class="sectionOffers__li">
-                                <img src="./icons/AC.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Air conditioner</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/breakfastSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Breakfast</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/cleaning.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Cleaning</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/grocery.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Grocery</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/shop.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Shop Near</span>
-                            </li>
-                        </ul>
-    
-                        <ul class="sectionOffers__ul">
-                            <li class="sectionOffers__li">
-                                <img src="./icons/wifiSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">High Speed WiFi</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/kitchen.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Kitchen</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/shower.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Shower</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/bedSmall.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Single Bed</span>
-                            </li>
-                            <li class="sectionOffers__li">
-                                <img src="./icons/towel.svg" alt="" class="sectionOffers__icon">
-                                <span class="sectionOffers__span">Towels</span>
-                            </li>
-                        </ul>
-                    </div>    
-
-                </div>
-                <button class="button button--dark">book now</button>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="sectionPopularList">
-        <h3 class="sectionPopularList__h3">popular List</h3>
-        <h1 class="sectionPopularList__h1">Popular Rooms</h1>
-
-        <div class="swiper swiperCore2Slide">
-            <div class="swiper-wrapper swiperCore2Slide__wrapper">
-                <div class="swiper-slide swiperCore2Slide__slide">
-                    <div class="roomCard">
-                        <div class="roomCard__section">
-                            <img src="./images/room1.jpg" alt="" class="swiperCore2Slide__img">
-                        </div>
-                        <div class="roomCard__section--text">
-                            <div class="roomCard__section">
-                                <div class="roomCard__icons">
-                                    <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
-                                </div>
-                                <h3 class="roomCard__h3">Minimal Duplex Room</h3>
-                                <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                                
-                                <div class="roomCard__section roomCard__section--price">
-                                    <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
-                                    <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide swiperCore2Slide__slide">
-                    <div class="roomCard">
-                        <div class="roomCard__section">
-                            <img src="./images/room2.jpg" alt="" class="swiperCore2Slide__img">
-                        </div>
-                        <div class="roomCard__section--text">
-                            <div class="roomCard__section">
-                                <div class="roomCard__icons">
-                                    <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
-                                </div>
-                                <h3 class="roomCard__h3">Minimal Duplex Room</h3>
-                                <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                                
-                                <div class="roomCard__section roomCard__section--price">
-                                    <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
-                                    <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                </div>
-                <div class="swiper-slide swiperCore2Slide__slide">
-                    <div class="roomCard">
-                        <div class="roomCard__section">
-                            <img src="./images/room1.jpg" alt="" class="swiperCore2Slide__img">
-                        </div>
-                        <div class="roomCard__section--text">
-                            <div class="roomCard__section">
-                                <div class="roomCard__icons">
-                                    <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
-                                </div>
-                                <h3 class="roomCard__h3">Minimal Duplex Room</h3>
-                                <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                                
-                                <div class="roomCard__section roomCard__section--price">
-                                    <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
-                                    <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide swiperCore2Slide__slide">
-                    <div class="roomCard">
-                        <div class="roomCard__section">
-                            <img src="./images/room2.jpg" alt="" class="swiperCore2Slide__img">
-                        </div>
-                        <div class="roomCard__section--text">
-                            <div class="roomCard__section">
-                                <div class="roomCard__icons">
-                                    <img src="./icons/bed.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/parking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cold.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/gym.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
-                                    <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
-                                </div>
-                                <h3 class="roomCard__h3">Minimal Duplex Room</h3>
-                                <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                                
-                                <div class="roomCard__section roomCard__section--price">
-                                    <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
-                                    <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                </div>
-                
-            </div>
-            <div class="swiperCore2Slide__container">
-                <div class="swiperCore2Slide__button swiperCore2Slide__button--prev"><</div>
-                <div class="swiperCore2Slide__button swiperCore2Slide__button--next">></div>
-            </div>
-        </div>
-
-    </section>
-
-    <footer class="footer">
-        <div class="footer__inner">
-                
-            <div class="footer__section">
-                <div class="logo">
-                    <div class="logo__square logo__square--highlight">
-                         <span class="logo__span logo__span--light">h</span>
-                    </div>
-                    <div class="logo__text">
-                        <p class="logo__p--bold">hotel</p>
-                        <p class="logo__p--regular">miranda</p>
-                    </div>
-                </div>
-        
-                <p class="footer__p">
-                    Lorem ipsum dolor sit amet, consect etur adipisicing elit, 
-                    sed doing eius mod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco 
-                    laboris nisi.
+            <div class="sectionOffers__bottomText">
+                <p class="sectionOffers__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate 
+                    velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
-                <div class="footer__socials">
-                    <i class="fa-brands fa-square-facebook footer__icon"></i>
-                    <i class="fa-brands fa-square-twitter footer__icon"></i>
-                    <i class="fa-brands fa-square-behance footer__icon"></i>
-                    <i class="fa-brands fa-linkedin footer__icon"></i>
-                    <i class="fa-brands fa-square-youtube footer__icon"></i>
+                <div class="sectionOffers__flex">
+                    <ul class="sectionOffers__ul">
+                        <li class="sectionOffers__li">
+                            <img src="./icons/AC.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Air conditioner</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/breakfastSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Breakfast</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/cleaning.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Cleaning</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/grocery.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Grocery</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/shop.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Shop Near</span>
+                        </li>
+                    </ul>
+
+                    <ul class="sectionOffers__ul">
+                        <li class="sectionOffers__li">
+                            <img src="./icons/wifiSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">High Speed WiFi</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/kitchen.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Kitchen</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/shower.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Shower</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/bedSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Single Bed</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/towel.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Towels</span>
+                        </li>
+                    </ul>
+                </div>    
+
+            </div>
+            <button class="button button--dark">book now</button>
+        </div>
+    </div>
+
+    <div class="sectionOffers__card">
+        <div class="sectionOffers__imgContainer">
+            <img src="./images/room1.jpg" alt="" class="sectionOffers__img">
+            <div class="sectionOffers__prices">
+                <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
+                <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
+            </div>
+        </div>
+        <div class="sectionOffers__text">
+            <div class="sectionOffers__topText">
+                <div class="topText__container">
+                    <h2 class="sectionOffers__h2">double bed</h2>
+                    <h1 class="sectionOffers__h1">Luxury Double Bed</h1>
+                </div>
+                <div class="sectionOffers__prices--alt">
+                    <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
+                    <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
                 </div>
             </div>
-    
-            <div class="footer__section">
-                <h3 class="footer__h3">Services.</h3>
-                <ul class="footer__ul">
-                    <li class="footer__li">+ Restaurant & Bar</li>
-                    <li class="footer__li">+ Swimming Pool</li>
-                    <li class="footer__li">+ Wellness & Spa</li>
-                    <li class="footer__li">+ Restaurant</li>
-                    <li class="footer__li">+ Conference Room</li>
-                    <li class="footer__li">+ Coctail Party House</li>
-                    <li class="footer__li">+ Gaming Zone</li>
-                    <li class="footer__li">+ Marriage Party</li>
-                    <li class="footer__li">+ Party Planning</li>
-                    <li class="footer__li">+ Tour Consultancy</li>
-                </ul>
+            <div class="sectionOffers__bottomText">
+                <p class="sectionOffers__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate 
+                    velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+                <div class="sectionOffers__flex">
+                    <ul class="sectionOffers__ul">
+                        <li class="sectionOffers__li">
+                            <img src="./icons/AC.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Air conditioner</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/breakfastSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Breakfast</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/cleaning.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Cleaning</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/grocery.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Grocery</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/shop.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Shop Near</span>
+                        </li>
+                    </ul>
+
+                    <ul class="sectionOffers__ul">
+                        <li class="sectionOffers__li">
+                            <img src="./icons/wifiSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">High Speed WiFi</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/kitchen.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Kitchen</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/shower.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Shower</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/bedSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Single Bed</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/towel.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Towels</span>
+                        </li>
+                    </ul>
+                </div>    
+
+            </div>
+            <button class="button button--dark">book now</button>
+        </div>
+    </div>
+    <div class="sectionOffers__card">
+        <div class="sectionOffers__imgContainer">
+            <img src="./images/room1.jpg" alt="" class="sectionOffers__img">
+            <div class="sectionOffers__prices">
+                <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
+                <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
+            </div>
+        </div>
+        <div class="sectionOffers__text">
+            <div class="sectionOffers__topText">
+                <div class="topText__container">
+                    <h2 class="sectionOffers__h2">double bed</h2>
+                    <h1 class="sectionOffers__h1">Luxury Double Bed</h1>
+                </div>
+                <div class="sectionOffers__prices--alt">
+                    <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
+                    <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
+                </div>
+            </div>
+            <div class="sectionOffers__bottomText">
+                <p class="sectionOffers__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate 
+                    velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+                <div class="sectionOffers__flex">
+                    <ul class="sectionOffers__ul">
+                        <li class="sectionOffers__li">
+                            <img src="./icons/AC.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Air conditioner</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/breakfastSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Breakfast</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/cleaning.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Cleaning</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/grocery.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Grocery</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/shop.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Shop Near</span>
+                        </li>
+                    </ul>
+
+                    <ul class="sectionOffers__ul">
+                        <li class="sectionOffers__li">
+                            <img src="./icons/wifiSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">High Speed WiFi</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/kitchen.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Kitchen</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/shower.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Shower</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/bedSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Single Bed</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/towel.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Towels</span>
+                        </li>
+                    </ul>
+                </div>    
+
+            </div>
+            <button class="button button--dark">book now</button>
+        </div>
+    </div>
+    <div class="sectionOffers__card">
+        <div class="sectionOffers__imgContainer">
+            <img src="./images/room1.jpg" alt="" class="sectionOffers__img">
+            <div class="sectionOffers__prices">
+                <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
+                <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
+            </div>
+        </div>
+        <div class="sectionOffers__text">
+            <div class="sectionOffers__topText">
+                <div class="topText__container">
+                    <h2 class="sectionOffers__h2">double bed</h2>
+                    <h1 class="sectionOffers__h1">Luxury Double Bed</h1>
+                </div>
+                <div class="sectionOffers__prices--alt">
+                    <p class="sectionOffers__p--highlight">$500<span class="sectionOffers__span">/Night</span></p>
+                    <p class="sectionOffers__p--red">$345<span class="sectionOffers__span--red">/Night</span></p>
+                </div>
+            </div>
+            <div class="sectionOffers__bottomText">
+                <p class="sectionOffers__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate 
+                    velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+                <div class="sectionOffers__flex">
+                    <ul class="sectionOffers__ul">
+                        <li class="sectionOffers__li">
+                            <img src="./icons/AC.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Air conditioner</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/breakfastSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Breakfast</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/cleaning.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Cleaning</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/grocery.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Grocery</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/shop.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Shop Near</span>
+                        </li>
+                    </ul>
+
+                    <ul class="sectionOffers__ul">
+                        <li class="sectionOffers__li">
+                            <img src="./icons/wifiSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">High Speed WiFi</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/kitchen.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Kitchen</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/shower.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Shower</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/bedSmall.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Single Bed</span>
+                        </li>
+                        <li class="sectionOffers__li">
+                            <img src="./icons/towel.svg" alt="" class="sectionOffers__icon">
+                            <span class="sectionOffers__span">Towels</span>
+                        </li>
+                    </ul>
+                </div>    
+
+            </div>
+            <button class="button button--dark">book now</button>
+        </div>
+    </div>
+</section>
+
+
+<section class="sectionPopularList">
+    <h3 class="sectionPopularList__h3">popular List</h3>
+    <h1 class="sectionPopularList__h1">Popular Rooms</h1>
+
+    <div class="swiper swiperCore2Slide">
+        <div class="swiper-wrapper swiperCore2Slide__wrapper">
+            <div class="swiper-slide swiperCore2Slide__slide">
+                <div class="roomCard">
+                    <div class="roomCard__section">
+                        <img src="./images/room1.jpg" alt="" class="swiperCore2Slide__img">
+                    </div>
+                    <div class="roomCard__section--text">
+                        <div class="roomCard__section">
+                            <div class="roomCard__icons">
+                                <img src="./icons/bed.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/parking.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/cold.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/gym.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
+                            </div>
+                            <h3 class="roomCard__h3">Minimal Duplex Room</h3>
+                            <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
+                            
+                            <div class="roomCard__section roomCard__section--price">
+                                <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
+                                <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiperCore2Slide__slide">
+                <div class="roomCard">
+                    <div class="roomCard__section">
+                        <img src="./images/room2.jpg" alt="" class="swiperCore2Slide__img">
+                    </div>
+                    <div class="roomCard__section--text">
+                        <div class="roomCard__section">
+                            <div class="roomCard__icons">
+                                <img src="./icons/bed.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/parking.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/cold.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/gym.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
+                            </div>
+                            <h3 class="roomCard__h3">Minimal Duplex Room</h3>
+                            <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
+                            
+                            <div class="roomCard__section roomCard__section--price">
+                                <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
+                                <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="swiper-slide swiperCore2Slide__slide">
+                <div class="roomCard">
+                    <div class="roomCard__section">
+                        <img src="./images/room1.jpg" alt="" class="swiperCore2Slide__img">
+                    </div>
+                    <div class="roomCard__section--text">
+                        <div class="roomCard__section">
+                            <div class="roomCard__icons">
+                                <img src="./icons/bed.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/parking.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/cold.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/gym.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
+                            </div>
+                            <h3 class="roomCard__h3">Minimal Duplex Room</h3>
+                            <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
+                            
+                            <div class="roomCard__section roomCard__section--price">
+                                <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
+                                <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiperCore2Slide__slide">
+                <div class="roomCard">
+                    <div class="roomCard__section">
+                        <img src="./images/room2.jpg" alt="" class="swiperCore2Slide__img">
+                    </div>
+                    <div class="roomCard__section--text">
+                        <div class="roomCard__section">
+                            <div class="roomCard__icons">
+                                <img src="./icons/bed.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/wifi.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/parking.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/cold.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/gym.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/smoking.svg" alt="" class="roomCard__icon">
+                                <img src="./icons/cocktail.svg" alt="" class="roomCard__icon">
+                            </div>
+                            <h3 class="roomCard__h3">Minimal Duplex Room</h3>
+                            <p class="roomCard__p">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
+                            
+                            <div class="roomCard__section roomCard__section--price">
+                                <p class="roomCard__p--highlight">$345<span class="roomCard__span">/Night</span></p>
+                                <p class="roomCard__button"><a class="roomCard__a" href="./details.html">Book Now</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             
-            <div class="footer__section">
-                
-                <h3 class="footer__h3">Contact Us.</h3>
-                <div class="footer__card">
-                    <img src="./icons//phone.svg" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
-                </div>
-                <div class="footer__card">
-                    <img src="./icons//mail.svg" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
-                </div>
-                <div class="footer__card">
-                    <img src="./icons//location.svg" alt="" class="footer__img">
-                    <div class="footer__text">
-                        <span class="footer__span footer__span--dark">Phone Number</span>
-                        <span class="footer__span footer__span--light">+987 876 765 76 577</span>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="footer__bottom">
-            <div class="footer__container">
-                <p class="footer__p--bold">Copyright By@Example - 2020</p>
-                <p class="footer__p--bold">Terms of use|Privacy Environmental Policy</p>
-            </div>
+        <div class="swiperCore2Slide__container">
+            <div class="swiperCore2Slide__button swiperCore2Slide__button--prev"><</div>
+            <div class="swiperCore2Slide__button swiperCore2Slide__button--next">></div>
         </div>
-    </footer>
-    
-</body>
-<script src="https://kit.fontawesome.com/c45d098780.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./javascript/script.js"></script>
- </html>
+    </div>
+
+</section>
+{% endblock %}
