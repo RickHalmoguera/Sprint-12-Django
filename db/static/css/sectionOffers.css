@@ -6,6 +6,13 @@
   max-width: 1420px;
   margin: 0 auto;
 }
+.sectionOffers__a {
+  text-decoration: none;
+  color: #FFF;
+}
+.sectionOffers__a:visited {
+  color: #FFF;
+}
 .sectionOffers__img {
   width: 100%;
   height: 300px;
@@ -36,6 +43,7 @@
   line-height: 2.4rem;
 }
 .sectionOffers__p--highlight {
+  display: inline-block;
   color: #BEAD8E;
   font-family: "Archivo", sans-serif;
   font-size: 2.3rem;
@@ -88,12 +96,13 @@
   margin-bottom: 1.5em;
 }
 .sectionOffers__span {
-  color: #777;
+  color: #BEAD8E;
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 1000px) {

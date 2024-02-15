@@ -52,14 +52,11 @@ const swiperIndex = new Swiper(".swiperIndex", {
   
 })
 
-const swiperCore2Slide = new Swiper(".swiperCore2Slide", {
+const swiperOffers = new Swiper(".swiperOffers", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop:true,
-  navigation: {
-    nextEl: '.swiperCore2Slide__button--next',
-    prevEl: '.swiperCore2Slide__button--prev',
-  },
+ 
   breakpoints:{
     1000:{
       slidesPerView: 2

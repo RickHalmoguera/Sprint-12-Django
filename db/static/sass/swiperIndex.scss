@@ -1,9 +1,6 @@
 @import "./variables.scss";
 
-.swiper-slide{
-    height: 300px;
-    margin: 3em 0 15em 0;
-}
+
  .swiperIndex{
    
     width: 100%;
@@ -22,6 +19,11 @@
         position: absolute;
         top: -3em;
         left: 15%;
+    }
+
+    &__swiperSlide{
+        height: 300px;
+        margin: 3em 0 15em 0;
     }
 
     &__span{

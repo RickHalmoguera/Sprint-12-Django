@@ -726,11 +726,6 @@
   margin-bottom: 5em;
 }
 
-.swiper-slide {
-  height: 300px;
-  margin: 3em 0 15em 0;
-}
-
 .swiperIndex {
   width: 100%;
 }
@@ -746,6 +741,10 @@
   position: absolute;
   top: -3em;
   left: 15%;
+}
+.swiperIndex__swiperSlide {
+  height: 300px;
+  margin: 3em 0 15em 0;
 }
 .swiperIndex__span {
   color: rgba(34, 34, 34, 0.04);
@@ -1550,12 +1549,19 @@
   background-color: #FFF;
 }
 .roomCard__section {
-  height: 260px;
+  height: 100%;
+}
+.roomCard__section--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 .roomCard__img {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 280px;
 }
 .roomCard__icons {
   z-index: 3;
@@ -1608,6 +1614,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2em;
+  padding: 1em;
 }
 .roomCard__section--text {
   margin-top: -3rem;
@@ -1637,6 +1644,7 @@
   display: flex;
   justify-content: center;
   gap: 1em;
+  margin-bottom: 2em;
 }
 .sectionControls__button {
   cursor: pointer;
@@ -1914,43 +1922,18 @@
     grid-template-columns: repeat(3, 150px);
   }
 }
-.swiperCore2Slide {
+.swiperOffers {
   width: 100%;
   z-index: 2;
   position: relative;
 }
-.swiperCore2Slide__wrapper {
+.swiperOffers__wrapper {
   width: 100%;
-  max-width: 40rem;
 }
-.swiperCore2Slide__container {
-  z-index: 3;
+.swiperOffers__img {
   width: 100%;
-  top: 25%;
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-}
-.swiperCore2Slide__img {
-  width: 100%;
-  height: 30rem;
+  height: 100%;
   object-fit: cover;
-}
-.swiperCore2Slide__button {
-  width: 3.2rem;
-  height: 3.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.3rem;
-  --swiper-navigation-size: 1.2rem;
-}
-.swiperCore2Slide__button--next {
-  background-color: #BEAD8E;
-  color: #FFF;
-}
-.swiperCore2Slide__button--prev {
-  background-color: #FFF;
 }
 
 .sectionOffers {
@@ -1960,6 +1943,13 @@
   padding: 5em 1em 4em 1em;
   max-width: 1420px;
   margin: 0 auto;
+}
+.sectionOffers__a {
+  text-decoration: none;
+  color: #FFF;
+}
+.sectionOffers__a:visited {
+  color: #FFF;
 }
 .sectionOffers__img {
   width: 100%;
@@ -1991,6 +1981,7 @@
   line-height: 2.4rem;
 }
 .sectionOffers__p--highlight {
+  display: inline-block;
   color: #BEAD8E;
   font-family: "Archivo", sans-serif;
   font-size: 2.3rem;
@@ -2043,12 +2034,13 @@
   margin-bottom: 1.5em;
 }
 .sectionOffers__span {
-  color: #777;
+  color: #BEAD8E;
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 1000px) {

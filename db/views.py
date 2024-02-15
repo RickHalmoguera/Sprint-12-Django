@@ -48,8 +48,7 @@ def rooms(request, template_name='rooms.html'):
     rooms = paginator.get_page(page_number)
     return render(request, template_name, {'rooms': rooms})
     
-        
-        
+    
 def index(request, template_name='index.html'):
     
     single_bed = Room.objects.filter(room_type='Single Bed').first()
@@ -67,5 +66,17 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
-def offers(request):
-    return render(request, 'offers.html')
+def offers(request, template_name ='offers.html'):
+    rooms_list = Room.objects.filter(offer = True)
+    double_superior = Room.objects.filter(room_type='Double Superior').first()
+    if double_superior.offer: 
+        double_superior.price_night = int(double_superior.price_night * (1 - double_superior.discount/100))
+    suite = Room.objects.filter(room_type='Suite').first()
+    if suite.offer: 
+        suite.price_night = int(suite.price_night * (1 - suite.discount/100))
+    for room in rooms_list:
+        room.discount_price = int(room.price_night * (1 - room.discount/100))
+    paginator = Paginator(rooms_list, 3)  
+    page_number = request.GET.get('page')
+    rooms = paginator.get_page(page_number)
+    return render(request, template_name, {'rooms': rooms, 'double_superior': double_superior, 'suite': suite})

@@ -1,0 +1,13 @@
+.swiperOffers {
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+.swiperOffers__wrapper {
+  width: 100%;
+}
+.swiperOffers__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}/*# sourceMappingURL=swiperOffers.css.map */

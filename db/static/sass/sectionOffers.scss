@@ -7,6 +7,15 @@
     padding: 5em 1em 4em 1em;
     max-width: 1420px;
     margin: 0 auto;
+
+    &__a{
+        text-decoration: none;
+        color: $font__color--text-light;
+
+        &:visited{
+            color: $font__color--text-light;
+        }
+    }
     
     &__img{
         width: 100%;
@@ -41,6 +50,7 @@
         font-weight: 400;
         line-height: 2.4rem;
         &--highlight{
+            display: inline-block;
             color: $font__color--highlight;
             font-family: $font__family--main;
             font-size: 2.3rem;
@@ -101,12 +111,13 @@
         margin-bottom: 1.5em;
     }
     &__span{
-        color: $font__color--text-medium;
+        color: $font__color--highlight;
         font-family: $font__family--extra;
         font-size: 1.5rem;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        text-decoration: none;
     }
 }
 
